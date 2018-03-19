@@ -1,0 +1,92 @@
+
+/* Google Fonts Preset
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css?family=Carrois+Gothic+SC|Cormorant+Garamond:400,400i');
+
+
+.main {
+  width: 100%;
+  height: 2000px;
+  background-color: #050505;
+}
+
+.wrapper_one {
+  position: absolute;
+  top: 0;
+  background-image: url("../images/sf_main_imgR.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper_two {
+  background-image: url("../images/about_main_img2.jpg");
+  position: absolute;
+  background-size: cover;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+}
+
+#logo {
+  position: fixed;
+  top: 5%;
+  right: 0;
+  margin-right: 40px;
+  z-index: 1;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.main_menu {
+  position: fixed;
+  text-align: right;
+  right: 0;
+  margin-top: 170px;
+  margin-right: 40px;
+  z-index: 1;
+}
+
+.main_menu li {
+  padding-top: 10px;
+  font-family: 'Maven Pro', sans-serif;
+  font-weight: 700;
+  color: #4A4A4A;
+  font-size: 2.6rem;
+  cursor: pointer;
+}
+
+.main_menu li:hover {
+  color: #2B023A;
+}
+
+.container {
+  width: 100%;
+  color: #A09FA0;
+}
+.contents {
+  position: absolute;
+  top: 35%;
+  left: 40%;
+}
+#title {
+  margin: 10px 0;
+  font-size: 4rem;
+  font-family: 'Carrois Gothic SC', sans-serif;
+  color: #4A4A4A;
+}
+#quote {
+  margin: 20px 0;
+  font-size: 3rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 100;
+}
+#discription {
+  margin: 20px 0;
+  width: 400px;
+  font-size: 2rem;
+  font-weight: 100;
+}
