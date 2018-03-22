@@ -34,17 +34,18 @@ html
             a(href='#qna_page') Q&A
         ul.sub_menu.gallery
           li
-            a(href='#movement_page') Movement
+            a(href='http://localhost:3000/galleries_movement') Movement
           li
-            a(href='http://localhost:3000/galleries_movement#emotion_page') Emotion
+            a(href='http://localhost:3000/galleries_emotion') emotion
           li
-            a(href='http://localhost:3000/galleries_movement#color_page') Color
+            a(href='http://localhost:3000/galleries_color') Color
           li
-            a(href='http://localhost:3000/galleries_movement#extream_page') Extream
+            a(href='http://localhost:3000/galleries_extream') Extream
       .wrapper.bg_empty_8
         .contents.gallery
+          img#logo_gallery(src='../images/movement.png')
           #title
-            span GALLERIES
+            span#movement_title GALLERIES
           .m-p-g
             .m-p-g__thumbs(data-google-image-layout='', data-max-height='350')
               img.m-p-g__thumbs-img(src='../images/bboy_freeze.jpg?image=940', data-full='../images/bboy_freeze.jpg?image=940')

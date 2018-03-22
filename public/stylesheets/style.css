@@ -168,6 +168,27 @@ ul {
   padding-left: 20px;
 
 }
+.contents.gallery #title span {
+  top: -4px;
+}
+#color_title,
+#movement_title,
+#emotion_title,
+#extream_title {
+  position: relative;
+  left: 10%;
+}
+
+#emotion_title,
+#extream_title {
+  left: 11%;
+}
+#movement_title {
+  left: 12%;
+}
+
+
+
 .contents.workflow .step1,
 .contents.making .making_even {
   width: 800px;
@@ -458,4 +479,9 @@ span.qna.qna_txt {
 .m-p-g {
   display: inline-block;
   border-right: 7px solid #949494;
+}
+
+#logo_gallery {
+  position: absolute;
+  margin-left: 15px;
 }
