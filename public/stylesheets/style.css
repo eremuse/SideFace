@@ -11,13 +11,17 @@ body {
 a:link { color: #4A4A4A; text-decoration: none;}
 a:visited { color: #4A4A4A; text-decoration: none;}
 a:hover { color: #2B023A; text-decoration: none;}
-
+#main_menu_selected {
+  color: #2B023A;
+}
+#sub_menu_selected {
+  color: #F2F2F2;
+}
 .main {
   width: 100%;
   height: 100%;
 }
 .wrapper {
-  border: 1px solid #949494;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -187,8 +191,6 @@ ul {
   left: 12%;
 }
 
-
-
 .contents.workflow .step1,
 .contents.making .making_even {
   width: 800px;
@@ -299,7 +301,7 @@ span.photo_txt {
 }
 .contact_box .sns_boxes {
   position: absolute;
-  top: 55%;
+  top: 52%;
   left: 104%;
 }
 .making .sns_box,
@@ -463,17 +465,16 @@ span.qna.qna_txt {
   position: absolute;
   font-size: 1.8rem;
   width: 100%;
-  top: 81.5%;
+  top: 79.5%;
   left: 95%;
 }
-.contact_photo_box img {
+.contact_photo_box img.contact {
   width: 400px;
+  border-top: 7px solid #979797;
+  border-right: 7px solid #979797;
 }
 .contact_photo_box {
   position: absolute;
-  border-top: 7px solid #979797;
-  border-right: 7px solid #979797;
-  border-bottom: 7px solid #979797;
 }
 
 .m-p-g {

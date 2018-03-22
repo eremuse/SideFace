@@ -17,21 +17,21 @@ html
           li
             a#menu_gallery(href='#') GALLERIES
           li
-            a(href='#') CONTACTS US
+            a(href='http://localhost:3000/#contact_page') CONTACTS US
         ul.sub_menu.company
           li
-            a(href='#about_page') About Us
+            a(href='http://localhost:3000/#about_page') About Us
           li
-            a(href='#workstyle_page') Work Style
+            a(href='http://localhost:3000/#workstyle_page') Work Style
           li
-            a(href='#workflow_page') Work Flow
+            a(href='http://localhost:3000/#workflow_page') Work Flow
           li
-            a(href='#making_page') Making
+            a(href='http://localhost:3000/#making_page') Making
         ul.sub_menu.client
           li
-            a(href='#making_page') Making
+            a(href='http://localhost:3000/#making_page') Making
           li
-            a(href='#qna_page') Q&A
+            a(href='http://localhost:3000/#qna_page') Q&A
         ul.sub_menu.gallery
           li
             a(href='http://localhost:3000/galleries_movement') Movement
@@ -43,7 +43,7 @@ html
             a(href='http://localhost:3000/galleries_extream') Extream
       .wrapper.bg_empty_8
         .contents.gallery
-          img#logo_color(src='../images/Color.png')
+          img#logo_gallery(src='../images/Color.png')
           #title
             span#color_title GALLERIES
           .m-p-g
@@ -83,18 +83,44 @@ html
       document.addEventListener('DOMContentLoaded', function() {
       var gallery = new MaterialPhotoGallery(elem);
       });
-      $("#menu_company").click(function(){
-        $(".sub_menu.company").show();
-        $(".sub_menu.client").hide();
-        $(".sub_menu.gallery").hide();
+      $('#menu_company').click(function(){
+        $('.sub_menu.company').show();
+        $('.sub_menu.client').hide();
+        $('.sub_menu.gallery').hide();
+        $(this).css('color', '#2B023A')
+        $('#menu_client').css('color', '#4A4A4A');
+        $('#menu_gallery').css('color', '#4A4A4A');
+        $('#menu_contact').css('color', '#4A4A4A');
       });
-      $("#menu_client").click(function(){
-        $(".sub_menu.client").show();
-        $(".sub_menu.company").hide();
-        $(".sub_menu.gallery").hide();
+      $('#menu_client').click(function(){
+        $('.sub_menu.client').show();
+        $('.sub_menu.company').hide();
+        $('.sub_menu.gallery').hide();
+        $(this).css('color', '#2B023A')
+        $('#menu_company').css('color', '#4A4A4A');
+        $('#menu_gallery').css('color', '#4A4A4A');
+        $('#menu_contact').css('color', '#4A4A4A');
       });
-      $("#menu_gallery").click(function(){
-        $(".sub_menu.gallery").show();
-        $(".sub_menu.company").hide();
-        $(".sub_menu.client").hide();
+      $('#menu_gallery').click(function(){
+        $('.sub_menu.gallery').show();
+        $('.sub_menu.company').hide();
+        $('.sub_menu.client').hide();
+        $(this).css('color', '#2B023A')
+        $('#menu_company').css('color', '#4A4A4A');
+        $('#menu_client').css('color', '#4A4A4A');
+        $('#menu_contact').css('color', '#4A4A4A');
+      });
+      $('#menu_contact').click(function(){
+        $('.sub_menu.company').hide();
+        $('.sub_menu.client').hide();
+        $('.sub_menu.gallery').hide();
+        $(this).css('color', '#2B023A')
+        $('#menu_company').css('color', '#4A4A4A');
+        $('#menu_client').css('color', '#4A4A4A');
+        $('#menu_gallery').css('color', '#4A4A4A');
+      });
+      $("#sub_menu").each(function () {
+        $(this).click(function () {
+          console.log('click test');
+        });
       });

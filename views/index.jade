@@ -7,7 +7,7 @@ html
     .main
       .wrapper.bg_index
         a(href='/')
-          img#logo(src="../images/Main_Logo2.png")
+          img#logo(src='../images/Main_Logo2.png')
         ul.main_menu
           li
             a#menu_company(href='#') COMPANY INTRO
@@ -16,15 +16,15 @@ html
           li
             a#menu_gallery(href='#') GALLERIES
           li
-            a(href='#') CONTACTS US
+            a#menu_contact(href='#') CONTACTS US
         ul.sub_menu.company
-          li
+          li#sub_menu.about
             a(href='#about_page') About Us
-          li
+          li#sub_menu.workstyle
             a(href='#workstyle_page') Work Style
-          li
+          li#sub_menu.workflow
             a(href='#workflow_page') Work Flow
-          li
+          li#sub_menu.making
             a(href='#making_page') Making
         ul.sub_menu.client
           li
@@ -203,8 +203,6 @@ html
             .contact_box
               #title CONTACT US
               #nickname RIVERIN
-              .contact_empty_box1
-              .contact_empty_box2
               .contact_photo_box
                 img.contact(src='../images/sf_motion_blur.jpg')
                 ul
@@ -217,20 +215,48 @@ html
                   img.sns_box.facebook(src='../images/facebook_ico_empty.png')
                   img.sns_box.kakao(src='../images/kakao_ico_empty.png')
                   img.sns_box.naver(src='../images/naver_ico_empty.png')
-    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
     script.
-      $("#menu_company").click(function(){
-        $(".sub_menu.company").show();
-        $(".sub_menu.client").hide();
-        $(".sub_menu.gallery").hide();
-      });
-      $("#menu_client").click(function(){
-        $(".sub_menu.client").show();
-        $(".sub_menu.company").hide();
-        $(".sub_menu.gallery").hide();
-      });
-      $("#menu_gallery").click(function(){
-        $(".sub_menu.gallery").show();
-        $(".sub_menu.company").hide();
-        $(".sub_menu.client").hide();
+      $(document).ready(function() {
+        $('#menu_company').click(function(){
+          $('.sub_menu.company').show();
+          $('.sub_menu.client').hide();
+          $('.sub_menu.gallery').hide();
+          $(this).css('color', '#2B023A')
+          $('#menu_client').css('color', '#4A4A4A');
+          $('#menu_gallery').css('color', '#4A4A4A');
+          $('#menu_contact').css('color', '#4A4A4A');
+        });
+        $('#menu_client').click(function(){
+          $('.sub_menu.client').show();
+          $('.sub_menu.company').hide();
+          $('.sub_menu.gallery').hide();
+          $(this).css('color', '#2B023A')
+          $('#menu_company').css('color', '#4A4A4A');
+          $('#menu_gallery').css('color', '#4A4A4A');
+          $('#menu_contact').css('color', '#4A4A4A');
+        });
+        $('#menu_gallery').click(function(){
+          $('.sub_menu.gallery').show();
+          $('.sub_menu.company').hide();
+          $('.sub_menu.client').hide();
+          $(this).css('color', '#2B023A')
+          $('#menu_company').css('color', '#4A4A4A');
+          $('#menu_client').css('color', '#4A4A4A');
+          $('#menu_contact').css('color', '#4A4A4A');
+        });
+        $('#menu_contact').click(function(){
+          $('.sub_menu.company').hide();
+          $('.sub_menu.client').hide();
+          $('.sub_menu.gallery').hide();
+          $(this).css('color', '#2B023A')
+          $('#menu_company').css('color', '#4A4A4A');
+          $('#menu_client').css('color', '#4A4A4A');
+          $('#menu_gallery').css('color', '#4A4A4A');
+        });
+        $("#sub_menu").each(function () {
+          $(this).click(function () {
+            console.log('click test');
+          });
+        });
       });
