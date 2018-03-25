@@ -29,12 +29,14 @@ a:hover { color: #2B023A; text-decoration: none;}
   background-size: cover;
 }
 .wrapper.bg_index {
-  background-image: url("../images/sf_main_imgR.jpg");
+  background-image: url("../images/main_img/mv1_2714.jpg");
+  background-size: 200%;
+  background-position: 83% 35%;
   top: 0;
   z-index: 1;
 }
 .wrapper.bg_about {
-  background-image: url("../images/about_main_img2.jpg");
+  background-image: url("../images/main_img/about_img2.jpg");
   top: 100%;
 }
 .wrapper.bg_empty_3 {
@@ -480,6 +482,9 @@ span.qna.qna_txt {
 .m-p-g {
   display: inline-block;
   border-right: 7px solid #949494;
+}
+.m-p-g img {
+  border-bottom: 1px solid #979797;
 }
 
 #logo_gallery {

@@ -18,6 +18,9 @@ router.get('/galleries_extream', function(req, res, next) {
 router.get('/galleries_movement', function(req, res, next) {
   res.render('galleries_movement');
 });
+router.get('/galleries_portrait', function(req, res, next) {
+  res.render('galleries_portrait');
+});
 
 
 module.exports = router;

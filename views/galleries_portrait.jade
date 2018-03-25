@@ -1,0 +1,89 @@
+html
+  head
+    title Material Photo Gallery
+    link(rel='stylesheet', href='/stylesheets/normalize.css')
+    link(rel='stylesheet', href='/stylesheets/material-photo-gallery.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    .main
+      .wrapper
+        a(href='/')
+          img#logo(src="../images/Main_Logo2.png")
+        ul.main_menu
+          li
+            a#menu_company(href='#') COMPANY INTRO
+          li
+            a#menu_client(href='#') CLIENT REFFERENCE
+          li
+            a#menu_gallery(href='#') GALLERIES
+          li
+            a(href='#') CONTACTS US
+        ul.sub_menu.company
+          li
+            a(href='http://localhost:3000/#about_page') About Us
+          li
+            a(href='http://localhost:3000/#workstyle_page') Work Style
+          li
+            a(href='http://localhost:3000/#workflow_page') Work Flow
+          li
+            a(href='http://localhost:3000/#making_page') Making
+        ul.sub_menu.client
+          li
+            a(href='http://localhost:3000/#making_page') Making
+          li
+            a(href='http://localhost:3000/#qna_page') Q&A
+        ul.sub_menu.gallery
+          li
+            a(href='http://localhost:3000/galleries_movement') Movement
+          li
+            a(href='http://localhost:3000/galleries_emotion') Emotion
+          li
+            a(href='http://localhost:3000/galleries_color') Color
+          li
+            a(href='http://localhost:3000/galleries_extream') Extream
+      .wrapper.bg_empty_8
+        .contents.gallery
+          img#logo_gallery(src='../images/movement.png')
+          #title
+            span#movement_title GALLERIES
+          .m-p-g
+            .m-p-g__thumbs(data-google-image-layout='', data-max-height='400')
+              img.m-p-g__thumbs-img(src='../images/main_img/090327_1.jpg?image=940', data-full='../images/main_img/090327_1.jpg?image=940')
+              img.m-p-g__thumbs-img(src='../images/main_img/090327_2.jpg?image=940', data-full='../images/main_img/090327_2.jpg?image=940')
+              img.m-p-g__thumbs-img(src='../images/main_img/091122.jpg?image=940', data-full='../images/main_img/091122.jpg?image=940')
+
+              img.m-p-g__thumbs-img(src='../images/main_img/091228.jpg?image=940', data-full='../images/main_img/091228.jpg?image=940')
+              img.m-p-g__thumbs-img(src='../images/main_img/100123.jpg?image=940', data-full='../images/main_img/100123.jpg?image=940')
+              img.m-p-g__thumbs-img(src='../images/main_img/100418.jpg?image=940', data-full='../images/main_img/100418.jpg?image=940')
+
+              img.m-p-g__thumbs-img(src='../images/main_img/111129_1.jpg?image=940', data-full='../images/main_img/111129_1.jpg?image=940')
+              img.m-p-g__thumbs-img(src='../images/main_img/111129_2.jpg?image=940', data-full='../images/main_img/111129_2.jpg?image=940')
+              img.m-p-g__thumbs-img(src='../images/main_img/111130.jpg?image=940', data-full='../images/main_img/111130.jpg?image=940')
+
+              img.m-p-g__thumbs-img(src='../images/main_img/120813.jpg?image=940', data-full='../images/main_img/120813.jpg?image=940')
+              img.m-p-g__thumbs-img(src='../images/main_img/170514.jpg?image=940', data-full='../images/main_img/170514.jpg?image=940')
+              img.m-p-g__thumbs-img(src='../images/main_img/090202.jpg?image=940', data-full='../images/main_img/090202.jpg?image=940')
+            .m-p-g__fullscreen
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src='/javascripts/material-photo-gallery.js')
+
+    script.
+      var elem = document.querySelector('.m-p-g');
+      document.addEventListener('DOMContentLoaded', function() {
+      var gallery = new MaterialPhotoGallery(elem);
+      });
+      $("#menu_company").click(function(){
+        $(".sub_menu.company").show();
+        $(".sub_menu.client").hide();
+        $(".sub_menu.gallery").hide();
+      });
+      $("#menu_client").click(function(){
+        $(".sub_menu.client").show();
+        $(".sub_menu.company").hide();
+        $(".sub_menu.gallery").hide();
+      });
+      $("#menu_gallery").click(function(){
+        $(".sub_menu.gallery").show();
+        $(".sub_menu.company").hide();
+        $(".sub_menu.client").hide();
+      });
