@@ -21,6 +21,9 @@ router.get('/galleries_movement', function(req, res, next) {
 router.get('/galleries_portrait', function(req, res, next) {
   res.render('galleries_portrait');
 });
+router.get('/#contact_page', function(req, res, next) {
+  res.render('index');
+});
 
 
 module.exports = router;

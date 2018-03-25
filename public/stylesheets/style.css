@@ -145,7 +145,9 @@ ul {
 .contents.workflow,
 .contents.making,
 .contents.qna,
-.contents.gallery {
+.contents.gallery,
+.contents.about,
+.contents.workstyle {
   top: 7%;
   left: 10%;
   z-index: 1;
@@ -154,11 +156,12 @@ ul {
 .contents.workflow #title,
 .contents.making #title,
 .contents.qna #title,
-.contents.gallery #title {
+.contents.gallery #title,
+.contents.about #title,
+.contents.workstyle #title {
   margin: 0;
-  width: 800px;
+  width: 807px;
   height: 60px;
-  border-left: 7px solid #A09FA0;
   border-bottom: 7px solid #A09FA0;
 }
 .contents.gallery #title {
@@ -168,14 +171,14 @@ ul {
 .contents.workflow #title span,
 .contents.making #title span,
 .contents.qna #title span,
-.contents.gallery #title span {
+.contents.gallery #title span,
+.contents.about #title span {
   position: absolute;
-  top: -7px;
-  padding-left: 20px;
-
+  top: 7px;
 }
 .contents.gallery #title span {
-  top: -4px;
+  top: 4px;
+  margin-left: 10px;
 }
 #color_title,
 #movement_title,
@@ -194,12 +197,77 @@ ul {
 }
 
 .contents.workflow .step1,
-.contents.making .making_even {
+.contents.making .making_even,
+.contents.about .about_box,
+.contents.workstyle .workstyle_box,
+.contents.qna .qna_box {
   width: 800px;
   height: 350px;
   border-right: 7px solid #A09FA0;
   border-bottom: 7px solid #A09FA0;
 }
+.contents.about .about_box,
+.contents.workstyle .workstyle_box {
+  border-bottom: none;
+  display: grid;
+  grid-template-columns: 45% 55%;
+}
+.contents.qna .qna_box {
+  height: auto;
+  border-bottom: none;
+}
+.contents.about .about_box {
+  height: 618px;
+}
+.contents.workstyle .workstyle_box {
+  height: 760px;
+}
+.crew_boxes img {
+  width: 45px;
+  margin-top: 5px;
+  border: 1px solid #979797;
+}
+.workstyle_img img {
+  width: 370px;
+  margin-bottom: -5px;
+}
+
+.crew_boxes ul {
+  padding: 0;
+}
+.crew_boxes ul li {
+}
+.crew_boxes ul li a {
+  display: inline-block;
+  position: absolute;
+  margin: 2px 5px;
+  font-size: 3rem;
+}
+.txt_box {
+  position: absolute;
+  top: 11%;
+  right: 2%;
+}
+.txt_box #title_inside_about,
+.txt_box #title_inside_workstyle {
+  font-size: 4rem;
+  text-align: right;
+  margin-bottom: 200px;
+  font-family: 'Cormorant Garamond', serif;
+}
+.txt_box #title_inside_workstyle {
+  font-size: 2.5rem;
+  margin-bottom: 0;
+}
+
+
+
+.txt_box #discription {
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+
 .contents.workflow .step2,
 .contents.making .making_odd {
   display: inline-block;
@@ -302,9 +370,8 @@ span.photo_txt {
   padding-right: 20px;
 }
 .contact_box .sns_boxes {
-  position: absolute;
-  top: 52%;
-  left: 104%;
+  float: none;
+  padding: 0;
 }
 .making .sns_box,
 .contact .sns_box {
@@ -319,13 +386,13 @@ span.photo_txt {
   text-align: left;
   padding-left: 20px;
 }
-.contents.workstyle {
+/* .contents.workstyle {
   display: grid;
   position: absolute;
   top: 10%;
   left: 10%;
   grid-template-columns: 750px 450px;
-}
+} */
 .worktypes {
   display: grid;
   position: relative;
@@ -388,50 +455,15 @@ span.qna.qna_txt {
   margin-top: 20px;
   border: 1px solid #979797;
   position: absolute;
-  width: 100%;
+  width: 95%;
   height: 100%;
 }
+
 .qna #discription {
-  padding-left: 20px;
-}
-.qna.q2,
-.qna.q3,
-.qna.q4,
-.qna.q5,
-.qna.q6,
-.qna.q7 {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-.qna.q2 {
-  top: 250%;
-}
-.qna.q3 {
-  top: 440%;
-}
-.qna.q4 {
-  top: 630%;
-}
-.qna.q5 {
-  top: 820%;
-}
-.qna.q6 {
-  top: 1010%;
-}
-.qna.q7 {
-  top: 1200%;
-}
-.qna.q2 #img_box {
-  margin-top: 20px;
   border: 1px solid #979797;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-.qna #discription {
+  padding: 20px;
+  padding-right: 0px;
   width: 750px;
-  height: 100%;
 }
 .contents.contact {
   position: absolute;
@@ -453,30 +485,26 @@ span.qna.qna_txt {
   width: 140%;
 }
 .contact_box #nickname {
-  position: absolute;
-  top: 270%;
-  left: -8px;
-  font-size: 10rem;
+  font-size: 4rem;
   opacity: 0.5;
-  z-index: 1
+  font-family: 'Cormorant Garamond', serif;
 }
 .contact_box #discription {
   font-size: 3rem;
 }
 .contact_box ul {
-  position: absolute;
   font-size: 1.8rem;
-  width: 100%;
-  top: 79.5%;
-  left: 95%;
+  margin-top: 10px;
+  padding: 0;
 }
 .contact_photo_box img.contact {
   width: 400px;
   border-top: 7px solid #979797;
   border-right: 7px solid #979797;
+  margin-bottom: 30px;
 }
 .contact_photo_box {
-  position: absolute;
+  text-align: center;
 }
 
 .m-p-g {
@@ -489,5 +517,5 @@ span.qna.qna_txt {
 
 #logo_gallery {
   position: absolute;
-  margin-left: 15px;
+  top: 7px;
 }

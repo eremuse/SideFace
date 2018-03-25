@@ -11,23 +11,21 @@ html
           img#logo(src="../images/Main_Logo2.png")
         ul.main_menu
           li
-            a#menu_company(href='#') COMPANY INTRO
+            a#menu_company() COMPANY INTRO
           li
-            a#menu_client(href='#') CLIENT REFFERENCE
+            a#menu_client() CLIENT REFFERENCE
           li
-            a#menu_gallery(href='#') GALLERIES
+            a#menu_gallery() GALLERIES
           li
-            a(href='#') CONTACTS US
+            a(href='/#contact_page') CONTACTS US
         ul.sub_menu.company
           li
             a(href='http://localhost:3000/#about_page') About Us
           li
             a(href='http://localhost:3000/#workstyle_page') Work Style
-          li
-            a(href='http://localhost:3000/#workflow_page') Work Flow
-          li
-            a(href='http://localhost:3000/#making_page') Making
         ul.sub_menu.client
+          li#sub_menu.workflow
+            a(href='http://localhost:3000/#workflow_page') Work Flow
           li
             a(href='http://localhost:3000/#making_page') Making
           li
@@ -50,32 +48,6 @@ html
             span#emotion_title GALLERIES
           .m-p-g
             .m-p-g__thumbs(data-google-image-layout='', data-max-height='350')
-              img.m-p-g__thumbs-img(src='../images/bboy_freeze.jpg?image=940', data-full='../images/bboy_freeze.jpg?image=940')
-              img.m-p-g__thumbs-img(src='../images/sf_main_img.jpg?image=940', data-full='../images/bboy_freeze.jpg?image=940')
-              img.m-p-g__thumbs-img(src='../images/crossfit01.jpg?image=940', data-full='../images/bboy_freeze.jpg?image=940')
-              img.m-p-g__thumbs-img(src='../images/about_main_img_O.jpg?image=940', data-full='../images/about_main_img_O.jpg?image=940')
-              img.m-p-g__thumbs-img(src='../images/gallary_full_frame_img.jpg?image=940', data-full='../images/gallary_full_frame_img.jpg?image=940')
-              img.m-p-g__thumbs-img(src='../images/judoka.jpg?image=823', data-full='../images/judoka.jpg?image=823')
-              img.m-p-g__thumbs-img(src='../images/bboy.jpg?image=823', data-full='../images/bboy.jpg?image=823')
-
-              img.m-p-g__thumbs-img(src='http://unsplash.it/600/400?image=940', data-full='http://unsplash.it/1200/800?image=940')
-
-              img.m-p-g__thumbs-img(src='http://unsplash.it/640/450?image=906', data-full='http://unsplash.it/1280/900?image=906')
-
-              img.m-p-g__thumbs-img(src='http://unsplash.it/550/420?image=885', data-full='http://unsplash.it/1100/840?image=885')
-
-              img.m-p-g__thumbs-img(src='http://unsplash.it/650/450?image=823', data-full='http://unsplash.it/1300/900?image=823')
-
-              img.m-p-g__thumbs-img(src='http://unsplash.it/600/350?image=815', data-full='http://unsplash.it/1200/700?image=815')
-
-              img.m-p-g__thumbs-img(src='http://unsplash.it/560/500?image=677', data-full='http://unsplash.it/1120/1000?image=677')
-
-              img.m-p-g__thumbs-img(src='http://unsplash.it/670/410?image=401', data-full='http://unsplash.it/1340/820?image=401')
-
-              img.m-p-g__thumbs-img(src='http://unsplash.it/620/340?image=623', data-full='http://unsplash.it/1240/680?image=623')
-
-              img.m-p-g__thumbs-img(src='http://unsplash.it/790/390?image=339', data-full='http://unsplash.it/1580/780?image=339')
-
             .m-p-g__fullscreen
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
     script(src='/javascripts/material-photo-gallery.js')
