@@ -29,14 +29,14 @@ a:hover { color: #2B023A; text-decoration: none;}
   background-size: cover;
 }
 .wrapper.bg_index {
-  background-image: url("../images/main_img/mv1_2714.jpg");
+  background-image: url("../images/movements/mv1_2714.jpg");
   background-size: 200%;
   background-position: 83% 35%;
   top: 0;
   z-index: 1;
 }
 .wrapper.bg_about {
-  background-image: url("../images/main_img/about_img2.jpg");
+  background-image: url("../images/sean/sean_yg.jpg");
   top: 100%;
 }
 .wrapper.bg_empty_3 {
