@@ -11,11 +11,9 @@ body {
 a:link { color: #4A4A4A; text-decoration: none;}
 a:visited { color: #4A4A4A; text-decoration: none;}
 a:hover { color: #2B023A; text-decoration: none;}
-#main_menu_selected {
-  color: #2B023A;
-}
-#sub_menu_selected {
-  color: #F2F2F2;
+
+li {
+  color: #4A4A4A;
 }
 .main {
   width: 100%;
@@ -94,7 +92,6 @@ ul {
   padding-top: 10px;
   font-family: 'Maven Pro', sans-serif;
   font-weight: 700;
-  color: #4A4A4A;
   font-size: 2.6rem;
   cursor: pointer;
 }
@@ -113,6 +110,12 @@ ul {
   color: #F2F2F2;
 }
 
+.main_menu_selected {
+  color: #2B023A;
+}
+.sub_menu_selected {
+  color: #F2F2F2;
+}
 .container {
   width: 100%;
   color: #A09FA0;
@@ -202,10 +205,13 @@ ul {
 .contents.workstyle .workstyle_box,
 .contents.qna .qna_box {
   width: 800px;
-  height: 350px;
+  height: 320px;
   border-right: 7px solid #A09FA0;
-  border-bottom: 7px solid #A09FA0;
 }
+.contents.making .making_even {
+  height: 350px;
+}
+
 .contents.about .about_box,
 .contents.workstyle .workstyle_box {
   border-bottom: none;
@@ -276,6 +282,7 @@ ul {
   border-left: 7px solid #A09FA0;
   border-bottom: 7px solid #A09FA0;
 }
+
 span.step_txt,
 span.qna_txt {
   position: absolute;
@@ -369,6 +376,10 @@ span.photo_txt {
   padding-top: 100px;
   padding-right: 20px;
 }
+.contact_box {
+  margin-top:
+}
+
 .contact_box .sns_boxes {
   float: none;
   padding: 0;
@@ -379,6 +390,7 @@ span.photo_txt {
   padding-left: 5px;
 }
 .making_even .sns_boxes {
+  margin-top: 8px;
   padding-right: 20px;
 }
 .making_odd .sns_boxes {
@@ -467,7 +479,7 @@ span.qna.qna_txt {
 }
 .contents.contact {
   position: absolute;
-  top: 20%;
+  top: 15%;
   left: 30%;
 }
 .contact_empty_box1,
