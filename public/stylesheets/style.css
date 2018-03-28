@@ -35,32 +35,34 @@ li {
   z-index: 1;
 }
 .wrapper.bg_about {
-  background-image: url("../images/sean/sean_yg.jpg");
   top: 100%;
 }
-.wrapper.bg_empty_3 {
+.wrapper.bg_2_2 {
   top: 200%;
 }
-.wrapper.bg_empty_3_2 {
+.wrapper.bg_empty_3 {
   top: 300%;
 }
-.wrapper.bg_empty_4 {
+.wrapper.bg_empty_3_2 {
   top: 400%;
 }
-.wrapper.bg_empty_4_2 {
+.wrapper.bg_empty_4 {
   top: 500%;
 }
-.wrapper.bg_empty_5 {
+.wrapper.bg_empty_4_2 {
   top: 600%;
 }
-.wrapper.bg_empty_6 {
+.wrapper.bg_empty_5 {
   top: 700%;
 }
-.wrapper.bg_empty_6_2 {
+.wrapper.bg_empty_6 {
   top: 800%;
 }
-.wrapper.bg_empty_7 {
+.wrapper.bg_empty_6_2 {
   top: 900%;
+}
+.wrapper.bg_empty_7 {
+  top: 1000%;
 }
 .wrapper.bg_empty_8 {
   top: 0;
@@ -97,8 +99,9 @@ ul {
   cursor: pointer;
 }
 .sub_menu {
-  top: 20%;
   display: none;
+  top: 200px;
+  z-index: 10;
 }
 .sub_menu li {
   font-size: 2rem;
@@ -141,8 +144,8 @@ ul {
 }
 #discription {
   margin: 20px 0;
-  width: 400px;
-  font-size: 1.7rem;
+  width: 380px;
+  font-size: 1.5rem;
   font-weight: 100;
 }
 
@@ -150,8 +153,7 @@ ul {
 .contents.making,
 .contents.qna,
 .contents.gallery,
-.contents.about,
-.contents.workstyle {
+.contents.about {
   top: 7%;
   left: 10%;
   z-index: 1;
@@ -161,8 +163,7 @@ ul {
 .contents.making #title,
 .contents.qna #title,
 .contents.gallery #title,
-.contents.about #title,
-.contents.workstyle #title {
+.contents.about #title {
   margin: 0;
   width: 807px;
   height: 60px;
@@ -203,22 +204,32 @@ ul {
 .contents.workflow .step1,
 .contents.making .making_even,
 .contents.about .about_box,
-.contents.workstyle .workstyle_box,
 .contents.qna .qna_box {
   width: 800px;
-  height: 320px;
+  height: 280px;
   border-right: 7px solid #A09FA0;
 }
+.making_even #txt_box {
+  width: 100%;
+  padding-top: 3%;
+}
+.contents.workflow .step1 {
+  height: 230px;
+}
+.about_box .txt_box {
+  width: 49%;
+  line-height: 1.5;
+  display: inline-block;
+}
 .contents.making .making_even {
-  height: 350px;
+
+  font-size: 2.5rem;
+
+}
+.contents.making .making_even {
+
 }
 
-.contents.about .about_box,
-.contents.workstyle .workstyle_box {
-  border-bottom: none;
-  display: grid;
-  grid-template-columns: 45% 55%;
-}
 .contents.qna .qna_box {
   height: auto;
   border-bottom: none;
@@ -226,63 +237,51 @@ ul {
 .contents.about .about_box {
   height: 618px;
 }
-.contents.workstyle .workstyle_box {
-  height: 760px;
-}
+
 .crew_boxes img {
-  width: 100%;
-  margin-top: 5px;
-  border: 1px solid #979797;
+  display: inline-block;
+  width: 34.6%;
+  margin-bottom: -3px;
 }
-.workstyle_img img {
-  width: 370px;
-  margin-bottom: -5px;
+.crew_boxes img.height {
+  width: 15.4%;
 }
+
 
 .crew_boxes ul {
   padding: 0;
 }
-.crew_boxes ul li {
-}
+
 .crew_boxes ul li a {
   display: inline-block;
   position: absolute;
   margin: 2px 5px;
   font-size: 3rem;
 }
-.txt_box {
+
+.txt_box.right #discription{
   position: absolute;
-  top: 11%;
-  right: 2%;
+  bottom: 3%;
 }
-.txt_box #title_inside_about,
+
 .txt_box #title_inside_workstyle {
   font-size: 4rem;
   text-align: right;
   font-family: 'Cormorant Garamond', serif;
 }
-.txt_box #title_inside_about {
+#title_inside_about {
+  font-family: 'Cormorant Garamond', serif;
   font-size: 3rem;
-  padding-top: 5px;
-  font-weight: 800;
+  font-weight: 400;
+  margin-top: 30px;
+
 }
 .txt_box #title_inside_workstyle {
   font-size: 2.5rem;
   margin-bottom: 0;
 }
 
-.txt_box img {
-  position: relative;
-  margin-top: 31px;
-  width: 45.5%;
-  left: 47%;
-  border: 1px solid #979797;
-}
-
-
-
 .txt_box #discription {
-  margin-bottom: 20px;
   text-align: justify;
 }
 
@@ -308,8 +307,8 @@ span.qna_txt {
 }
 .contents.making #youtube,
 span.photo_txt {
-  width: 560px;
-  height: 318px;
+  width: 10%;
+  height: 250px;
   display: table-cell;
   vertical-align: middle;
   text-align: center;
@@ -324,7 +323,10 @@ span.photo_txt {
   border: 1px solid #979797;
   position: absolute;
   width: 300px;
-  height: 300px;
+}
+.step1 img {
+  width: 100%;
+  height: 200px;
 }
 .step1 #quote,
 .step1 #discription,
@@ -335,17 +337,18 @@ span.photo_txt {
   left: 45%;
   line-height: 1.5;
 }
+
 .step1 #quote {
   font-size: 4rem;
-  padding-top: 10px;
+  padding-top: 15px;
 }
 
 .making #img_box {
-  margin-top: 14px;
+  margin-top: 24px;
   border: 1px solid #979797;
   position: absolute;
-  width: 560px;
-  height: 318px;
+  width: 500px;
+  height: 258px;
 }
 .making_odd #img_box {
   position: relative;
@@ -356,9 +359,10 @@ span.photo_txt {
 .making #quote {
   font-family: 'Maven Pro', sans-serif;
   font-weight: 600;
+  line-height: 1;
 }
 .making #discription {
-  margin: 10px 0;
+  margin: 0;
 }
 
 .making_even #quote,
@@ -368,6 +372,11 @@ span.photo_txt {
   right: 0%;
   text-align: right;
 }
+.making_even #quote {
+  margin-bottom: 10px;
+  padding-top: 10px;
+  font-size: 2.5rem;
+}
 .making_odd #quote,
 .making_odd #discription {
   padding-left: 20px;
@@ -376,9 +385,9 @@ span.photo_txt {
 
 .sns_boxes {
   display: inline-block;
-  width: 200px;
+  width: 150px;
   float: right;
-  padding-top: 100px;
+  padding-top: 20px;
   padding-right: 20px;
 }
 .contact_box {
@@ -391,11 +400,10 @@ span.photo_txt {
 }
 .making .sns_box,
 .contact .sns_box {
-  width: 30px;
+  width: 25px;
   padding-left: 5px;
 }
 .making_even .sns_boxes {
-  margin-top: 8px;
   padding-right: 20px;
 }
 .making_odd .sns_boxes {
@@ -403,13 +411,7 @@ span.photo_txt {
   text-align: left;
   padding-left: 20px;
 }
-/* .contents.workstyle {
-  display: grid;
-  position: absolute;
-  top: 10%;
-  left: 10%;
-  grid-template-columns: 750px 450px;
-} */
+
 .worktypes {
   display: grid;
   position: relative;
