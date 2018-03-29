@@ -120,12 +120,28 @@ ul {
 .sub_menu_selected {
   color: #F2F2F2;
 }
+.main_menu_hamberger {
+  cursor: pointer;
+  display: none;
+  position: fixed;
+  top: 5%;
+}
+.main_menu_hamberger .ham {
+  display: inline-block;
+  margin-right: -35px;
+  width: 40px;
+  height: 40px;
+  border-right: 3px solid #979797;
+}
+
 .container {
-  width: 100%;
+  max-width: 100%;
+  height: auto;
   color: #A09FA0;
 }
 .contents {
   position: absolute;
+  max-width: 100%;
   top: 35%;
   left: 40%;
 }
@@ -149,11 +165,16 @@ ul {
   font-weight: 100;
 }
 
+#about_page {
+  max-width: 50%;
+}
+
 .contents.workflow,
 .contents.making,
 .contents.qna,
 .contents.gallery,
 .contents.about {
+  max-width: 100%;
   top: 7%;
   left: 10%;
   z-index: 1;
@@ -537,4 +558,32 @@ span.qna.qna_txt {
 #logo_gallery {
   position: absolute;
   top: 7px;
+}
+
+
+@media only screen and (max-width: 1024px) {
+  .main_menu {
+    display: none;
+  }
+  .main_menu_hamberger {
+    display: block;
+  }
+
+}
+
+@media only screen and (max-width: 485px) {
+  .wrapper.bg_index {
+
+    background-size: 270%;
+    background-position: 75% 35%;
+  }
+  #logo {
+    width: 25%;
+    top: 3%;
+    right: -5%;
+  }
+  .main_menu_hamberger {
+    top: 3%;
+    left: -3%;
+  }
 }
