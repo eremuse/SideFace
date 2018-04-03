@@ -10,6 +10,7 @@ a:hover { color: #2B023A; text-decoration: none;}
 
 body {
   background-color: #050505;
+  transition: background-color .5s;
 }
 li {
   color: #4A4A4A;
@@ -32,38 +33,29 @@ li {
   background-size: 200%;
   background-position: 83% 35%;
   top: 0;
-  z-index: 1;
+
 }
 .wrapper.bg_about {
-  top: 100%;
+  top: 150%;
 }
-.wrapper.bg_2_2 {
-  top: 200%;
-}
+
 .wrapper.bg_empty_3 {
   top: 300%;
 }
-.wrapper.bg_empty_3_2 {
-  top: 400%;
-}
+
 .wrapper.bg_empty_4 {
-  top: 500%;
+  top: 470%;
 }
-.wrapper.bg_empty_4_2 {
-  top: 600%;
-}
-.wrapper.bg_empty_5 {
-  top: 700%;
-}
+
+
 .wrapper.bg_empty_6 {
-  top: 800%;
-}
-.wrapper.bg_empty_6_2 {
-  top: 900%;
+  top: 645%;
 }
 .wrapper.bg_empty_7 {
-  top: 1000%;
+  top: 870%;
 }
+
+
 .wrapper.bg_empty_8 {
   top: 0;
 }
@@ -73,7 +65,7 @@ li {
   right: 0;
   width: 180px;
   margin-right: 40px;
-  z-index: 4;
+
 }
 
 ul {
@@ -87,7 +79,7 @@ ul {
   right: 0;
   margin-top: 150px;
   margin-right: 40px;
-  z-index: 4;
+
 }
 
 .main_menu li,
@@ -101,7 +93,7 @@ ul {
 .sub_menu {
   display: none;
   top: 200px;
-  z-index: 10;
+
 }
 .sub_menu li {
   font-size: 2rem;
@@ -125,6 +117,7 @@ ul {
   display: none;
   position: fixed;
   top: 5%;
+
 }
 .main_menu_hamberger .ham {
   display: inline-block;
@@ -133,6 +126,56 @@ ul {
   height: 40px;
   border-right: 3px solid #979797;
 }
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  width: 100%;
+  padding: 0px 0px 15px 20px;
+  text-decoration: none;
+  font-size: 2.5rem;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 1%;
+  left: 75%;
+  font-size: 36px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+#side_main {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  margin-top: 20px;
+}
+#side_sub {
+  width: 95%;
+  font-size: 1.7rem;
+  text-align: right;
+  padding: 0;
+}
+
 
 .container {
   max-width: 100%;
@@ -173,7 +216,7 @@ ul {
   max-width: 100%;
   top: 7%;
   left: 10%;
-  z-index: 1;
+
 }
 
 .contents.workflow #title,
@@ -480,7 +523,7 @@ span.qna.qna_txt {
   position: absolute;
   left: 0;
   height: 80px;
-  z-index: 1;
+
 }
 .contact_empty_box2 {
   top: 650%;
@@ -550,7 +593,6 @@ span.qna.qna_txt {
   .contents.contact {
     top: 7%;
     left: 4.5%;
-    z-index: 1;
     height: 100%;
   }
   .contents.about {

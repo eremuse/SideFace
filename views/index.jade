@@ -10,12 +10,25 @@ html
       .wrapper.bg_index
         a(href='/')
           img#logo(src='../images/icons/main_logo.png')
-        .main_menu_hamberger
-          .ham
-          .ham
-          .ham
-          .ham
-
+        #mySidenav.sidenav
+          a.closebtn(href='javascript:void(0)', onclick='closeNav()') ×
+          a#side_main(href='#about_page') ABOUT US
+          a#side_main(href='') CLIENTS
+          a#side_sub(href='#workflow_page') Work Flow
+          a#side_sub(href='#making_page') Making
+          a#side_sub(href='#qna_page') Q&A
+          a#side_main(href='') GALLERIES
+          a#side_sub(href='/galleries_movement') Movement
+          a#side_sub(href='/galleries_portrait') Portrait
+          a#side_sub(href='') Emotion
+          a#side_sub(href='') Color
+          a#side_main(href='#contact_page') CONTACT
+        #main.main_menu_hamberger
+          span(onclick='openNav()')
+            .ham
+            .ham
+            .ham
+            .ham
         ul.main_menu
           li
             a#menu_company(href='#about_page') ABOUT US
@@ -54,7 +67,6 @@ html
               .txt_box
                 #discription 찰나의 순간 움직임을 담는다. 그 순간은 찍는 것이 아니라 이제는 만들어 내야 합니다. 인간의 몸으로 표현 할 수 있는 최고의 순간. 그 타이밍은 음악도 영상도 그 외에 어떤 매개체로도 정확한 본질을 표현 하기 힘들다고 생각합니다. 순간의 영원함을 표현할 수 있는 것은 오직 사진 뿐 입니다.
 
-      .wrapper.bg_empty_2_2
       .wrapper.bg_empty_3#workflow_page
         .container
           .contents.workflow
@@ -89,7 +101,7 @@ html
                 #txt_box
                   #quote PostProduction
                   #discription 제작과정에서 가장 많은 시간이 소요되는 후반 작업 단계입니다. 요구사항의 난이도와 양에 따라서 소요되는 시간은 유동적입니다. 작업이 끝난 콘텐츠에 대해서 추가 요청이나 수정사항이 있을 경우에는 별도의 제작비가 발생할 수 있습니다.
-      .wrapper.bg_empty_3_2
+
       .wrapper.bg_empty_4#making_page
         .container
           .contents.making
@@ -132,7 +144,7 @@ html
                     img.sns_box.facebook(src='../images/icons/facebook_ico_empty.png')
                     img.sns_box.kakao(src='../images/icons/kakao_ico_empty.png')
                     img.sns_box.naver(src='../images/icons/naver_ico_empty.png')
-      .wrapper.bg_empty_4_2
+
       .wrapper.bg_empty_6#qna_page
         .container
           .contents.qna
@@ -169,7 +181,7 @@ html
                 #quote “Movement is the song of the body.”
                 #discription
                   span A long awaited reprint of this classical work revised by Vanda’s daughter and based on extensive notes left by the author allowing the book to be published for the first time as Vanda intended. Even if you have the first edition, it’s still worth investing in this one to see how Vanda’s ideas subtly changed. Superbly illustrated with
-      .wrapper.bg_empty_6_2
+
       .wrapper.bg_empty_7#contact_page
         .container
           .contents.contact
@@ -227,4 +239,19 @@ html
         $('.unlink').click(function(e) {
           e.preventDefault();
         });
+        $('.sidenav a').click(function() {
+          document.getElementById("mySidenav").style.width = "0";
+          document.getElementById("main").style.marginLeft= "0";
+          document.body.style.backgroundColor = "#050505";
+        });
       });
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+        document.body.style.backgroundColor = "#050505";
+      }
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft= "0";
+        document.body.style.backgroundColor = "#050505";
+      }
