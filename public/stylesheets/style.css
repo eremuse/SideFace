@@ -181,8 +181,7 @@ ul {
 .contents.qna #title,
 .contents.gallery #title,
 .contents.about #title {
-  margin: 0;
-  width: 800px;
+  width: 100%;
   height: 60px;
 }
 .contents.gallery #title {
@@ -222,10 +221,10 @@ ul {
 .contents.about .about_box,
 .contents.qna .qna_box {
   width: 800px;
-  height: 280px;
+  height: 295px;
 }
 
-.contents.about .about_box,
+.contents.about .crew_boxes,
 .contents.workflow .step_box,
 .contents.making .making_box,
 .contents.qna .qna_box {
@@ -233,38 +232,39 @@ ul {
   border-right: 7px solid #A09FA0;
 }
 .making #txt_box {
+  position: relative;
+  text-align: right;
+  top: -100%;
+  right: 2%;
+}
+.making #txt_box .sns_boxes {
+  position: absolute;
+  right: -20px;
+}
+.making #discription {
   width: 100%;
-  padding-top: 3%;
+  margin: 0;
 }
 .contents.workflow .step1 {
   height: 230px;
 }
 .about_box .txt_box {
-  width: 49%;
+  width: 100%;
   line-height: 1.5;
-  display: inline-block;
 }
 .contents.making .making {
-
+  margin-top: 30px;
   font-size: 2.5rem;
-
 }
-.contents.making .making {
-
-}
-
 .contents.qna .qna_box {
   height: auto;
   border-bottom: none;
 }
-.contents.about .about_box {
-  height: 618px;
+.contents.about {
+  right: auto;
 }
-
 .crew_boxes img {
-  display: inline-block;
-  width: 34.6%;
-  margin-bottom: -3px;
+  width: 100%;
 }
 .crew_boxes img.height {
   width: 15.4%;
@@ -297,7 +297,7 @@ ul {
   font-size: 3rem;
   font-weight: 400;
   margin-top: 30px;
-
+  text-align: center;
 }
 .txt_box #title_inside_workstyle {
   font-size: 2.5rem;
@@ -305,6 +305,7 @@ ul {
 }
 
 .txt_box #discription {
+  width: 100%;
   text-align: justify;
 }
 
@@ -328,16 +329,7 @@ span.qna_txt {
   padding-top: 15px;
   margin-left: 0;
 }
-.contents.making #youtube,
-span.photo_txt {
-  width: 10%;
-  height: 250px;
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
-  font-size: 2rem;
-  font-weight: 100;
-}
+
 .step1 #txt_box {
   padding: 0;
 }
@@ -352,11 +344,8 @@ span.photo_txt {
   height: 200px;
 }
 .step1 #quote,
-.step1 #discription,
-.making #quote,
-.making #discription {
+.step1 #discription {
   position: relative;
-  width: 400px;
   left: 45%;
   line-height: 1.5;
 }
@@ -373,10 +362,8 @@ span.photo_txt {
   width: 500px;
   height: 258px;
 }
-.making_odd #img_box {
-  position: relative;
-  float: right;
-  bottom: 195px;
+.making img {
+  width: 60%;
 }
 
 .making #quote {
@@ -384,28 +371,11 @@ span.photo_txt {
   font-weight: 600;
   line-height: 1;
 }
-.making #discription {
-  margin: 0;
-}
-
-.making #quote,
-.making #discription,
-.making .sns_boxes {
-  padding-left: 20px;
-  right: 0%;
-  text-align: right;
-}
 .making #quote {
   margin-bottom: 10px;
   padding-top: 10px;
   font-size: 2.5rem;
 }
-.making_odd #quote,
-.making_odd #discription {
-  padding-left: 20px;
-  text-align: left;
-}
-
 .sns_boxes {
   display: inline-block;
   width: 150px;
@@ -425,14 +395,6 @@ span.photo_txt {
 .contact .sns_box {
   width: 25px;
   padding-left: 5px;
-}
-.making .sns_boxes {
-  padding-right: 20px;
-}
-.making_odd .sns_boxes {
-  position: absolute;
-  text-align: left;
-  padding-left: 20px;
 }
 
 .worktypes {
@@ -562,15 +524,15 @@ span.qna.qna_txt {
   top: 7px;
 }
 
-@media only screen and (max-width: 376px) {
-  .wrapper.bg_index {
-    background-size: 300%;
-  }
-}
+
 
 @media only screen and (max-width: 485px) {
+  .main {
+    width: 50%;
+  }
   .wrapper.bg_index {
-    background-size: 270%;
+    background-size: 296%;
+    background-position: 61% 6%;
   }
   #logo {
     width: 25%;
@@ -581,6 +543,129 @@ span.qna.qna_txt {
     top: 3%;
     left: -3%;
   }
+  .contents.about,
+  .contents.workflow,
+  .contents.making,
+  .contents.qna,
+  .contents.contact {
+    top: 7%;
+    left: 4.5%;
+    z-index: 1;
+    height: 100%;
+  }
+  .contents.about {
+    max-width: 110%;
+  }
+  .contents.workflow,
+  .contents.making {
+    max-width: 92%;
+  }
+  .contents.contact {
+    top: 80%;
+  }
+  .contents.workflow #title,
+  .contents.making #title,
+  .contents.qna #title,
+  .contents.gallery #title,
+  .contents.about #title,
+  .contents.contact #title {
+    font-size: 3rem;
+    width: 50%;
+    height: 30px;
+  }
+  #title_inside_about {
+    font-size: 2.5rem;
+  }
+  .contents.about .crew_boxes,
+  .contents.workflow .step_box,
+  .contents.making .making_box,
+  .contents.qna .qna_box,
+  .contact_photo_box img.contact {
+    border-top: 5px solid #A09FA0;
+    border-right: 5px solid #A09FA0;
+  }
+  .contents.about .about_box {
+    width: 96%;
+    height: 100%;
+  }
+  .contents.qna .qna_box {
+    width: 96.5%;
+  }
+  .qna #discription {
+    width: 96%;
+    padding: 10px;
+    text-align: justify;
+  }
+  .contents.making .making {
+    width: 86%;
+  }
+  .step1 #img_box {
+    display: none;
+  }
+  .step1 #discription {
+    margin: 0;
+    width: 365px;
+    text-align: justify;
+  }
+  .step1 #quote {
+    font-size: 2.6rem;
+  }
+  .contents.workflow .step1 {
+    max-width: 0%;
+  }
+  .contents.making .making {
+    margin-top: 20px;
+    height: 230px;
+  }
+  .making img {
+    width: 112%;
+  }
+  .making #txt_box {
+    top: -90%;
+    left: 20px;
+  }
+  .making #quote {
+    font-size: 2.0rem;
+  }
+  .qna #quote {
+    line-height: 1.1;
+    font-size: 2.5rem;
+  }
+  span.qna_txt {
+    font-size: 2.3rem;
+    padding-top: 5px;
+  }
+  .contact_photo_box img.contact {
+    width: 380px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .contents.about,
+  .contents.workflow,
+  .contents.making,
+  .contents.qna,
+  .contents.contact {
+    left: 3%;
+  }
+  .contents.workflow, .contents.making {
+    max-width: 94%;
+  }
+  .contents.about .about_box {
+    width: 97%;
+  }
+  .step1 #discription {
+    width: 340px;
+  }
+  .making #txt_box {
+    top: -89%;
+  }
+  .contact_photo_box img.contact {
+    width: 354px;
+  }
+  .contents.contact {
+    top: 120%;
+  }
 }
 
 @media only screen and (max-width: 1024px) {
@@ -589,5 +674,8 @@ span.qna.qna_txt {
   }
   .main_menu_hamberger {
     display: block;
+  }
+  .making #txt_box .sns_boxes {
+    padding-top: 10px;
   }
 }
