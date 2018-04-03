@@ -4,14 +4,13 @@
 
 @import url('https://fonts.googleapis.com/css?family=Carrois+Gothic+SC|Cormorant+Garamond:400,400i');
 
-body {
-  background-color: #050505;
-}
-
 a:link { color: #4A4A4A; text-decoration: none;}
 a:visited { color: #4A4A4A; text-decoration: none;}
 a:hover { color: #2B023A; text-decoration: none;}
 
+body {
+  background-color: #050505;
+}
 li {
   color: #4A4A4A;
 }
@@ -26,6 +25,7 @@ li {
   height: 100%;
   background-image: url("../images/page_bg_empty.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
 }
 .wrapper.bg_index {
   background-image: url("../images/movements/mv1_2714.jpg");
@@ -165,10 +165,6 @@ ul {
   font-weight: 100;
 }
 
-#about_page {
-  max-width: 50%;
-}
-
 .contents.workflow,
 .contents.making,
 .contents.qna,
@@ -186,9 +182,8 @@ ul {
 .contents.gallery #title,
 .contents.about #title {
   margin: 0;
-  width: 807px;
+  width: 800px;
   height: 60px;
-  border-bottom: 7px solid #A09FA0;
 }
 .contents.gallery #title {
   width: 867px;
@@ -223,14 +218,21 @@ ul {
 }
 
 .contents.workflow .step1,
-.contents.making .making_even,
+.contents.making .making,
 .contents.about .about_box,
 .contents.qna .qna_box {
   width: 800px;
   height: 280px;
+}
+
+.contents.about .about_box,
+.contents.workflow .step_box,
+.contents.making .making_box,
+.contents.qna .qna_box {
+  border-top: 7px solid #A09FA0;
   border-right: 7px solid #A09FA0;
 }
-.making_even #txt_box {
+.making #txt_box {
   width: 100%;
   padding-top: 3%;
 }
@@ -242,12 +244,12 @@ ul {
   line-height: 1.5;
   display: inline-block;
 }
-.contents.making .making_even {
+.contents.making .making {
 
   font-size: 2.5rem;
 
 }
-.contents.making .making_even {
+.contents.making .making {
 
 }
 
@@ -282,7 +284,7 @@ ul {
 
 .txt_box.right #discription{
   position: absolute;
-  bottom: 3%;
+  bottom: 1.2%;
 }
 
 .txt_box #title_inside_workstyle {
@@ -351,8 +353,8 @@ span.photo_txt {
 }
 .step1 #quote,
 .step1 #discription,
-.making_even #quote,
-.making_even #discription {
+.making #quote,
+.making #discription {
   position: relative;
   width: 400px;
   left: 45%;
@@ -386,14 +388,14 @@ span.photo_txt {
   margin: 0;
 }
 
-.making_even #quote,
-.making_even #discription,
-.making_even .sns_boxes {
+.making #quote,
+.making #discription,
+.making .sns_boxes {
   padding-left: 20px;
   right: 0%;
   text-align: right;
 }
-.making_even #quote {
+.making #quote {
   margin-bottom: 10px;
   padding-top: 10px;
   font-size: 2.5rem;
@@ -424,7 +426,7 @@ span.photo_txt {
   width: 25px;
   padding-left: 5px;
 }
-.making_even .sns_boxes {
+.making .sns_boxes {
   padding-right: 20px;
 }
 .making_odd .sns_boxes {
@@ -560,22 +562,15 @@ span.qna.qna_txt {
   top: 7px;
 }
 
-
-@media only screen and (max-width: 1024px) {
-  .main_menu {
-    display: none;
+@media only screen and (max-width: 376px) {
+  .wrapper.bg_index {
+    background-size: 300%;
   }
-  .main_menu_hamberger {
-    display: block;
-  }
-
 }
 
 @media only screen and (max-width: 485px) {
   .wrapper.bg_index {
-
     background-size: 270%;
-    background-position: 75% 35%;
   }
   #logo {
     width: 25%;
@@ -585,5 +580,14 @@ span.qna.qna_txt {
   .main_menu_hamberger {
     top: 3%;
     left: -3%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .main_menu {
+    display: none;
+  }
+  .main_menu_hamberger {
+    display: block;
   }
 }

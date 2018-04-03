@@ -1,7 +1,8 @@
 doctype html
 html
   head
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous")
     link(rel='stylesheet', href='/stylesheets/normalize.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
@@ -42,7 +43,6 @@ html
             a(href='/galleries_color') Color
           li.unlink
             a(href='/galleries_extream') Extream
-
       .wrapper.bg_about#about_page
         .container
           .contents.about
@@ -68,79 +68,81 @@ html
           .contents.workflow
             #title
               span WORK FLOW
-            .step1
-              #img_box
-                span.step_txt Step1
-                img(src='../images/consulting_sample.jpg')
-              #txt_box
-                #quote Cunsulting
-                #discription 촬영 과정에 대한 전반적인 사항을 문의 할 수 있습니다.대부분은 온라인으로 상담이 이루어 지며 요구 사항에 따라서 오프라인으로 미팅이 이루어 지기도 합니다. 제작 비용은 정해진 상품외에는 요구사항의 난이도에 따라 제 각기 다르므로 협의를 통해 결정됩니다.
-            .step1
-              #img_box
-                span.step_txt Step2
-                img(src='../images/planning_sample.jpg')
-              #txt_box
-                #quote Planing
-                #discription 상담한 내용을 토대로 컨셉구상을 한 후 본격적으로 기획을 하는 단계입니다. 사전 미팅을 통해서 양측이 합의할 수 있는 기획안을 완성한 후에는 결과물을 예상할 수 있는 구체적인 디자인 시안을 받아 볼 수 있습니다.
-            .step1
-              #img_box
-                span.step_txt Step3
-                img(src='../images/making_sample.jpg')
-              #txt_box
-                #quote Making
-                #discription 실제 촬영이 진행되는 단계 입니다. 제작하는 콘텐츠가 sideface 내부에서 진행하는 프로젝트와 공통되는 부분이 있을 경우에는 클라이언트와의 협의를 통해서 고퀄리티의 Making 영상제작이 함께 이루어 지기도 합니다.
-            .step1
-              #img_box
-                span.step_txt Step4
-                img(src='../images/post_production_sample.jpg')
-              #txt_box
-                #quote Post Production
-                #discription 제작과정에서 가장 많은 시간이 소요되는 후반 작업 단계입니다. 요구사항의 난이도와 양에 따라서 소요되는 시간은 유동적입니다. 작업이 끝난 콘텐츠에 대해서 추가 요청이나 수정사항이 있을 경우에는 별도의 제작비가 발생할 수 있습니다.
+            .step_box
+              .step1
+                #img_box
+                  span.step_txt Step1
+                  img(src='../images/consulting_sample.jpg')
+                #txt_box
+                  #quote Cunsulting
+                  #discription 촬영 과정에 대한 전반적인 사항을 문의 할 수 있습니다.대부분은 온라인으로 상담이 이루어 지며 요구 사항에 따라서 오프라인으로 미팅이 이루어 지기도 합니다. 제작 비용은 정해진 상품외에는 요구사항의 난이도에 따라 제 각기 다르므로 협의를 통해 결정됩니다.
+              .step1
+                #img_box
+                  span.step_txt Step2
+                  img(src='../images/planning_sample.jpg')
+                #txt_box
+                  #quote Planing
+                  #discription 상담한 내용을 토대로 컨셉구상을 한 후 본격적으로 기획을 하는 단계입니다. 사전 미팅을 통해서 양측이 합의할 수 있는 기획안을 완성한 후에는 결과물을 예상할 수 있는 구체적인 디자인 시안을 받아 볼 수 있습니다.
+              .step1
+                #img_box
+                  span.step_txt Step3
+                  img(src='../images/making_sample.jpg')
+                #txt_box
+                  #quote Making
+                  #discription 실제 촬영이 진행되는 단계 입니다. 제작하는 콘텐츠가 sideface 내부에서 진행하는 프로젝트와 공통되는 부분이 있을 경우에는 클라이언트와의 협의를 통해서 고퀄리티의 Making 영상제작이 함께 이루어 지기도 합니다.
+              .step1
+                #img_box
+                  span.step_txt Step4
+                  img(src='../images/post_production_sample.jpg')
+                #txt_box
+                  #quote Post Production
+                  #discription 제작과정에서 가장 많은 시간이 소요되는 후반 작업 단계입니다. 요구사항의 난이도와 양에 따라서 소요되는 시간은 유동적입니다. 작업이 끝난 콘텐츠에 대해서 추가 요청이나 수정사항이 있을 경우에는 별도의 제작비가 발생할 수 있습니다.
       .wrapper.bg_empty_3_2
       .wrapper.bg_empty_4#making_page
         .container
           .contents.making
             #title
               span MAKING
-            .making_even
-              #img_box
-                span#youtube Youtube
-              #txt_box
-                #quote Rebok Crossfit<br>Gangam
-                #discription Date: 2018. 2. 14
-                #discription Location: Seoul
-                #discription Type: Potrait
-                .sns_boxes
-                  img.sns_box.instagram(src='../images/icons/instagram_ico_empty.png')
-                  img.sns_box.facebook(src='../images/icons/facebook_ico_empty.png')
-                  img.sns_box.kakao(src='../images/icons/kakao_ico_empty.png')
-                  img.sns_box.naver(src='../images/icons/naver_ico_empty.png')
-            .making_even
-              #img_box
-                span#youtube Youtube
-              #txt_box
-                #quote Pliates Jeff Studio
-                #discription Date: 2018. 2. 14
-                #discription Location: Seoul
-                #discription Type: Movement
-                .sns_boxes
-                  img.sns_box.instagram(src='../images/icons/instagram_ico_empty.png')
-                  img.sns_box.facebook(src='../images/icons/facebook_ico_empty.png')
-                  img.sns_box.kakao(src='../images/icons/kakao_ico_empty.png')
-                  img.sns_box.naver(src='../images/icons/naver_ico_empty.png')
-            .making_even
-              #img_box
-                span#youtube Youtube
-              #txt_box
-                #quote Rebok Crossfit<br>Gangam Gym
-                #discription Date: 2018. 2. 14
-                #discription Location: Seoul
-                #discription Type: Potrait
-                .sns_boxes
-                  img.sns_box.instagram(src='../images/icons/instagram_ico_empty.png')
-                  img.sns_box.facebook(src='../images/icons/facebook_ico_empty.png')
-                  img.sns_box.kakao(src='../images/icons/kakao_ico_empty.png')
-                  img.sns_box.naver(src='../images/icons/naver_ico_empty.png')
+            .making_box
+              .making
+                #img_box
+                  span#youtube Youtube
+                #txt_box
+                  #quote Rebok Crossfit<br>Gangam
+                  #discription Date: 2018. 2. 14
+                  #discription Location: Seoul
+                  #discription Type: Potrait
+                  .sns_boxes
+                    img.sns_box.instagram(src='../images/icons/instagram_ico_empty.png')
+                    img.sns_box.facebook(src='../images/icons/facebook_ico_empty.png')
+                    img.sns_box.kakao(src='../images/icons/kakao_ico_empty.png')
+                    img.sns_box.naver(src='../images/icons/naver_ico_empty.png')
+              .making
+                #img_box
+                  span#youtube Youtube
+                #txt_box
+                  #quote Pliates Jeff Studio
+                  #discription Date: 2018. 2. 14
+                  #discription Location: Seoul
+                  #discription Type: Movement
+                  .sns_boxes
+                    img.sns_box.instagram(src='../images/icons/instagram_ico_empty.png')
+                    img.sns_box.facebook(src='../images/icons/facebook_ico_empty.png')
+                    img.sns_box.kakao(src='../images/icons/kakao_ico_empty.png')
+                    img.sns_box.naver(src='../images/icons/naver_ico_empty.png')
+              .making
+                #img_box
+                  span#youtube Youtube
+                #txt_box
+                  #quote Rebok Crossfit<br>Gangam Gym
+                  #discription Date: 2018. 2. 14
+                  #discription Location: Seoul
+                  #discription Type: Potrait
+                  .sns_boxes
+                    img.sns_box.instagram(src='../images/icons/instagram_ico_empty.png')
+                    img.sns_box.facebook(src='../images/icons/facebook_ico_empty.png')
+                    img.sns_box.kakao(src='../images/icons/kakao_ico_empty.png')
+                    img.sns_box.naver(src='../images/icons/naver_ico_empty.png')
       .wrapper.bg_empty_4_2
       .wrapper.bg_empty_6#qna_page
         .container
