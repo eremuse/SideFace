@@ -27,6 +27,7 @@ li {
   background-size: cover;
   background-repeat: no-repeat;
   border-top: 1px solid #979797;
+  z-index: -1;
 }
 .wrapper.bg_index {
   background-image: url("../images/movements/mv1_2714.jpg");
@@ -40,16 +41,20 @@ li {
 
 .wrapper.bg_empty_3 {
   top: 230%;
+  z-index: -2;
 }
 
 .wrapper.bg_empty_4 {
   top: 390%;
+  z-index: -2;
 }
 .wrapper.bg_empty_7 {
   top: 570%;
+  z-index: -2;
 }
 .wrapper.bg_empty_8 {
   top: 0;
+  z-index: -2;
 }
 #logo {
   position: fixed;
@@ -154,13 +159,17 @@ ul {
 
 #main {
   transition: margin-left .5s;
-  left: -5%;
 }
 #mySidenav ul {
   padding: 0;
   width: 105px;
   height: 50px;
   left: 125px;
+}
+.sidenav_box {
+  padding-top: 15%;
+  width: 100%;
+  height: 100%;
 }
 .list1 {
   height: 50px;
@@ -172,15 +181,16 @@ ul {
   position: absolute;
 }
 #menu1 {
-  top: 25%;
+  top: 38%;
   left: 64%;
 }
 #menu2 {
-  top: 42%;
+  top: 55%;
   left: 64%;
 }
 #about_page {
   height: 60px;
+  z-index: -2;
 }
 #side_main {
   width: 200px;
@@ -246,9 +256,6 @@ ul {
 .contents.gallery #title,
 .contents.about #title {
   width: 100%;
-}
-.contents.gallery #title {
-  width: 867px;
 }
 
 .contents.workflow .step1,
@@ -559,7 +566,71 @@ span.qna.qna_txt {
   top: 7px;
 }
 
+@media only screen and (max-width: 1024px) {
+  .main_menu {
+    display: none;
+  }
+  .main_menu_hamberger {
+    display: block;
+  }
+  .making #txt_box .sns_boxes {
+    padding-top: 10px;
+  }
+}
 
+@media only screen and (min-width: 768px) {
+  .contents.workflow,
+  .contents.making,
+  .contents.qna,
+  .contents.gallery,
+  .contents.about {
+    top: 12%;
+    left: 0;
+  }
+  .contents.workflow #title,
+  .contents.making #title,
+  .contents.qna #title,
+  .contents.gallery #title,
+  .contents.about #title {
+    padding-left: 4%;
+  }
+
+  .m-p-g {
+    margin: 0 4%;
+  }
+}
+@media only screen and (min-width: 736px) {
+  .wrapper.bg_empty_3 {
+    top: 310%;
+  }
+  .wrapper.bg_empty_4 {
+    top: 570%;
+  }
+  .wrapper.bg_empty_7 {
+    top: 850%;
+  }
+  .step1 #quote, .step1 #discription {
+    left: 0;
+  }
+  .contents.workflow,
+  .contents.making,
+  .contents.qna,
+  .contents.gallery,
+  .contents.about {
+    left: 3%;
+    width: 100%;
+  }
+  .contents.workflow .step1,
+  .contents.making .making,
+  .contents.about .about_box,
+  .contents.qna .qna_box {
+    width: 100%;
+  }
+  .step1 img {
+    width: 70%;
+    height: 70%;
+  }
+}
 
 @media only screen and (max-width: 485px) {
   .main {
@@ -573,37 +644,41 @@ span.qna.qna_txt {
     top: 200%;
   }
   .wrapper.bg_empty_4 {
-    top: 340%;
+    top: 350%;
   }
   .wrapper.bg_empty_7 {
-    top: 460%;
+    top: 480%;
   }
   #logo {
     width: 25%;
     top: 3%;
-    right: -3%;
+    right: -24px;
   }
   .main_menu_hamberger {
     top: 24px;
-    left: -3%;
+    left: -18px;
   }
   .contents.about,
   .contents.workflow,
   .contents.making,
   .contents.qna,
   .contents.contact {
-    top: 7%;
+    top: 12%;
     left: 4.5%;
     height: 100%;
   }
+  .contents.gallery {
+    top: 12%;
+    left: 0;
+  }
   .contents.about {
-    top: 2%;
+    top: 152%;
     max-width: 110%;
   }
   .contents.workflow,
   .contents.making {
     max-width: 92%;
-    top: 2%;
+    top: 12%;
   }
 
   .contents.workflow #title,
@@ -611,13 +686,19 @@ span.qna.qna_txt {
   .contents.qna #title,
   .contents.gallery #title,
   .contents.about #title,
-  .contents.contact #title {
+  .contents.contact #title,
+  .contents.gallery #title {
+    margin-bottom: 3%;
     font-size: 3rem;
-    width: 50%;
+    width: 100%;
     height: 30px;
   }
   #title_inside_about {
     font-size: 2.5rem;
+  }
+  .contents.gallery #title {
+    margin-left: 3%;
+    margin-bottom: 0;
   }
   .contents.about .crew_boxes,
   .contents.workflow .step_box,
@@ -681,9 +762,15 @@ span.qna.qna_txt {
   .contact_photo_box img.contact {
     width: 370px;
   }
+  .m-p-g {
+    margin: 4%;
+  }
+  .m-p-g__fullscreen.active {
+    height: 100%;
+  }
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 376px) {
   .contents.about,
   .contents.workflow,
   .contents.making,
@@ -697,6 +784,12 @@ span.qna.qna_txt {
   .contents.about .about_box {
     width: 97%;
   }
+  .main_menu_hamberger {
+    top: 22px;
+  }
+  .main_menu_hamberger .ham {
+    height: 39px;
+  }
   .step1 #discription {
     width: 340px;
   }
@@ -708,17 +801,5 @@ span.qna.qna_txt {
   }
   .contents.contact {
     top: 120%;
-  }
-}
-
-@media only screen and (max-width: 1024px) {
-  .main_menu {
-    display: none;
-  }
-  .main_menu_hamberger {
-    display: block;
-  }
-  .making #txt_box .sns_boxes {
-    padding-top: 10px;
   }
 }
