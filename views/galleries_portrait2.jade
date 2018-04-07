@@ -1,0 +1,89 @@
+html
+  head
+    title Material Photo Gallery
+    link(rel='stylesheet', href='/stylesheets/normalize.css')
+    link(rel='stylesheet', href='/stylesheets/material-photo-gallery.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    .main
+      .wrapper
+        a(href='/')
+          img#logo(src="../images/icons/main_logo.png")
+        ul.main_menu
+          li
+            a#menu_company() COMPANY INTRO
+          li
+            a#menu_client() CLIENT REFFERENCE
+          li
+            a#menu_gallery() GALLERIES
+          li
+            a(href='/galleries_portait') Potrait
+        ul.sub_menu.company
+          li
+            a(href='/#about_page') About Us
+          li
+            a(href='/#workstyle_page') Work Style
+        ul.sub_menu.client
+          li#sub_menu.workflow
+            a(href='/#workflow_page') Work Flow
+          li
+            a(href='/#making_page') Making
+          li
+            a(href='/#qna_page') Q&A
+        ul.sub_menu.gallery
+          li
+            a(href='/galleries_movement') Movement
+          li
+            a(href='/galleries_emotion') Emotion
+          li
+            a(href='/galleries_color') Color
+          li
+            a(href='/galleries_extream') Extream
+            li
+              a(href='/galleries_portrait') portrait
+      .wrapper.bg_empty_8
+        .contents.gallery
+          img#logo_gallery(src='../images/icons/movement.png')
+          #title
+            span#movement_title GALLERIES
+          .m-p-g
+            .m-p-g__thumbs(data-google-image-layout='', data-max-height='400')
+              img.m-p-g__thumbs-img(src='../images/portraits/090327_1.jpg?image=940', data-full='../images/portraits/090327_1.jpg?image=940')
+              img.m-p-g__thumbs-img(src='../images/portraits/090327_2.jpg?image=940', data-full='../images/portraits/090327_2.jpg?image=940')
+              img.m-p-g__thumbs-img(src='../images/portraits/091122.jpg?image=940', data-full='../images/portraits/091122.jpg?image=940')
+
+              img.m-p-g__thumbs-img(src='../images/portraits/091228.jpg?image=940', data-full='../images/portraits/091228.jpg?image=940')
+              img.m-p-g__thumbs-img(src='../images/portraits/100123.jpg?image=940', data-full='../images/portraits/100123.jpg?image=940')
+              img.m-p-g__thumbs-img(src='../images/portraits/100418.jpg?image=940', data-full='../images/portraits/100418.jpg?image=940')
+
+              img.m-p-g__thumbs-img(src='../images/portraits/111129_1.jpg?image=940', data-full='../images/portraits/111129_1.jpg?image=940')
+              img.m-p-g__thumbs-img(src='../images/portraits/111129_2.jpg?image=940', data-full='../images/portraits/111129_2.jpg?image=940')
+              img.m-p-g__thumbs-img(src='../images/portraits/111130.jpg?image=940', data-full='../images/portraits/111130.jpg?image=940')
+
+              img.m-p-g__thumbs-img(src='../images/portraits/120813.jpg?image=940', data-full='../images/portraits/120813.jpg?image=940')
+              img.m-p-g__thumbs-img(src='../images/portraits/170514.jpg?image=940', data-full='../images/portraits/170514.jpg?image=940')
+              img.m-p-g__thumbs-img(src='../images/portraits/090202.jpg?image=940', data-full='../images/portraits/090202.jpg?image=940')
+            .m-p-g__fullscreen
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src='/javascripts/material-photo-gallery.js')
+
+    script.
+      var elem = document.querySelector('.m-p-g');
+      document.addEventListener('DOMContentLoaded', function() {
+      var gallery = new MaterialPhotoGallery(elem);
+      });
+      $("#menu_company").click(function(){
+        $(".sub_menu.company").show();
+        $(".sub_menu.client").hide();
+        $(".sub_menu.gallery").hide();
+      });
+      $("#menu_client").click(function(){
+        $(".sub_menu.client").show();
+        $(".sub_menu.company").hide();
+        $(".sub_menu.gallery").hide();
+      });
+      $("#menu_gallery").click(function(){
+        $(".sub_menu.gallery").show();
+        $(".sub_menu.company").hide();
+        $(".sub_menu.client").hide();
+      });

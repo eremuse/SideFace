@@ -1,6 +1,8 @@
 html
   head
     title Material Photo Gallery
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous")
     link(rel='stylesheet', href='/stylesheets/normalize.css')
     link(rel='stylesheet', href='/stylesheets/material-photo-gallery.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
@@ -8,44 +10,58 @@ html
     .main
       .wrapper
         a(href='/')
-          img#logo(src="../images/icons/main_logo.png")
+          img#logo(src='../images/icons/main_logo.png')
+        #mySidenav.sidenav
+          a.closebtn(href='javascript:void(0)', onclick='closeNav()') ×
+          ul
+            li
+              a.list1#side_main(href='#about_page') ABOUT US
+            li
+              a.list2#side_main(href='') CLIENTS
+              ul.inside_menu#menu1
+                li
+                  a#side_sub(href='#workflow_page') Work Flow
+                li
+                  a#side_sub(href='#making_page') Making
+            li
+              a.list3#side_main(href='') GALLERIES
+              ul.inside_menu#menu2
+                li
+                  a#side_sub(href='/galleries_movement') Movement
+                li
+                  a#side_sub(href='/galleries_portrait') Portrait
+            li
+              a.list4#side_main(href='#contact_page') CONTACT
+        #main.main_menu_hamberger
+          span(onclick='openNav()')
+            .ham
+            .ham
+            .ham
+            .ham
+            .ham
         ul.main_menu
           li
-            a#menu_company() COMPANY INTRO
+            a#menu_company(href='#about_page') ABOUT US
           li
             a#menu_client() CLIENT REFFERENCE
           li
             a#menu_gallery() GALLERIES
           li
-            a(href='/#contact_page') CONTACTS US
-        ul.sub_menu.company
-          li
-            a(href='/#about_page') About Us
-          li
-            a(href='/#workstyle_page') Work Style
+            a#menu_contact(href='#contact_page') CONTACT
         ul.sub_menu.client
           li#sub_menu.workflow
-            a(href='/#workflow_page') Work Flow
+            a(href='#workflow_page') Work Flow
           li
-            a(href='/#making_page') Making
-          li
-            a(href='/#qna_page') Q&A
+            a(href='#making_page') Making
         ul.sub_menu.gallery
           li
             a(href='/galleries_movement') Movement
           li
-            a(href='/galleries_emotion') Emotion
-          li
-            a(href='/galleries_color') Color
-          li
-            a(href='/galleries_extream') Extream
-          li
             a(href='/galleries_portrait') Portrait
       .wrapper.bg_empty_8
         .contents.gallery
-          img#logo_gallery(src='../images/icons/movement.png')
           #title
-            span#movement_title GALLERIES
+            #title GALLERIES
           .m-p-g
             .m-p-g__thumbs(data-google-image-layout='', data-max-height='350')
               img.m-p-g__thumbs-img(src='../images/movements/mv1_2714.jpg?image=940', data-full='../images/movements/mv1_2714.jpg?image=940')
@@ -59,7 +75,6 @@ html
             .m-p-g__fullscreen
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
     script(src='/javascripts/material-photo-gallery.js')
-
     script.
       var elem = document.querySelector('.m-p-g');
       document.addEventListener('DOMContentLoaded', function() {
@@ -80,3 +95,13 @@ html
         $(".sub_menu.company").hide();
         $(".sub_menu.client").hide();
       });
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+        document.body.style.backgroundColor = "#050505";
+      }
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft= "0";
+        document.body.style.backgroundColor = "#050505";
+      }
