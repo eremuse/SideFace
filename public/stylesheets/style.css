@@ -236,11 +236,6 @@ ul {
   height: 295px;
 }
 
-.contents.qna .qna_box,
-.m-p-g {
-  border-top: 7px solid #A09FA0;
-  border-right: 7px solid #A09FA0;
-}
 .making #txt_box {
   top: -100%;
   right: 2%;
@@ -399,25 +394,14 @@ span.qna_txt {
   margin-right: 10px;
 }
 #nickname {
-  font-size: 3.5rem;
+  font-size: 3.3rem;
   font-family: 'Cormorant Garamond', serif;
   font-weight: bold;
 }
 
-
-.m-p-g {
-  display: inline-block;
-}
 .m-p-g img {
   border-bottom: 1px solid #979797;
 }
-
-#logo_gallery {
-  position: absolute;
-  top: 7px;
-}
-
-
 
 @media only screen and (max-width: 1024px) {
   .main_menu {
@@ -465,7 +449,7 @@ span.qna_txt {
     z-index: 1;
   }
   #discription {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   .contents.about,
   .contents.workflow,
@@ -487,7 +471,7 @@ span.qna_txt {
     top: 12%;
   }
   .contents.making {
-    top: 66%;
+    top: 65%;
   }
   .contents.contact {
     top: 54%;
@@ -500,7 +484,6 @@ span.qna_txt {
   .contents.about #title,
   .contents.contact #title,
   .contents.gallery #title {
-    margin-bottom: 3%;
     font-size: 3rem;
     width: 300px;
     height: 30px;
@@ -521,11 +504,6 @@ span.qna_txt {
   .contents.qna .qna_box {
     width: 96.5%;
   }
-  .qna #discription {
-    width: 96%;
-    padding: 10px;
-    text-align: justify;
-  }
   .contents.making .making {
     width: 55%;
   }
@@ -538,12 +516,19 @@ span.qna_txt {
   .step1 #quote {
     font-size: 2.6rem;
   }
+  .contact_box,
+  .step_box {
+    margin-top: 15px;
+  }
+  .contact_box ul li {
+    font-size: 1.6rem;
+  }
 
   .contents.making .making {
     height: 171px;
   }
   .making img {
-    width: 112%;
+    width: 130%;
   }
   .making #txt_box {
     margin-top: 10px;
@@ -554,7 +539,9 @@ span.qna_txt {
     line-height: 1.2;
   }
   .m-p-g {
-    margin: 4%;
+    position: relative;
+    margin: 0 3%;
+    margin-top: 5%;
   }
   .m-p-g__fullscreen.active {
     height: 100%;
@@ -577,6 +564,9 @@ span.qna_txt {
   }
   #discription {
     width: 340px;
+  }
+  .contact_box ul li {
+    font-size: 1.5rem;
   }
 }
 @media only screen and (max-width: 321px) {
@@ -628,5 +618,8 @@ span.qna_txt {
   .contents.contact #title,
   .contents.gallery #title {
     width: 280px;
+  }
+  .contact_box ul li {
+    font-size: 1.3rem;
   }
 }

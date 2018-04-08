@@ -7,72 +7,73 @@ html
     link(rel='stylesheet', href='/stylesheets/material-photo-gallery.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
-    .wrapper_gallery
-      a(href='/')
-        img#logo(src='../images/icons/main_logo.png')
-      #mySidenav.sidenav
-        .sidenav_box
-          a.closebtn(href='javascript:void(0)', onclick='closeNav()') ×
-          ul.side_menu_list
+    .main
+      .wrapper
+        .container
+          a(href='/')
+            img#logo(src='../images/icons/main_logo.png')
+          #mySidenav.sidenav
+            .sidenav_box
+              a.closebtn(href='javascript:void(0)', onclick='closeNav()') ×
+              ul.side_menu_list
+                li
+                  a(href='/')
+                    img#side_menu_logo(src='../images/icons/main_logo.png')
+                li
+                  a(href='#about_page') ABOUT US
+                li
+                  a(href='') CLIENTS
+                  .side_menu_inside
+                    a(href='#workflow_page') Work Flow
+                    a(href='#making_page') Making
+                li
+                  a(href='') GALLERIES
+                  .side_menu_inside
+                    a(href='/galleries_movement') Movement
+                    a(href='/galleries_portrait') Portrait
+                li
+                  a.list4#side_main(href='#contact_page') CONTACT
+          #main.main_menu_hamberger
+            span(onclick='openNav()')
+              .ham
+              .ham
+              .ham
+              .ham
+              .ham
+          ul.main_menu
             li
-              a(href='/')
-                img#side_menu_logo(src='../images/icons/main_logo.png')
+              a#menu_company(href='#about_page') ABOUT US
             li
-              a(href='#about_page') ABOUT US
+              a#menu_client() CLIENT REFFERENCE
             li
-              a(href='') CLIENTS
-              .side_menu_inside
-                a(href='#workflow_page') Work Flow
-                a(href='#making_page') Making
+              a#menu_gallery() GALLERIES
             li
-              a(href='') GALLERIES
-              .side_menu_inside
-                a(href='/galleries_movement') Movement
-                a(href='/galleries_portrait') Portrait
+              a#menu_contact(href='/contact_page#contact_page') CONTACT
+          ul.sub_menu.client
+            li#sub_menu.workflow
+              a(href='#workflow_page') Work Flow
             li
-              a.list4#side_main(href='#contact_page') CONTACT
-      #main.main_menu_hamberger
-        span(onclick='openNav()')
-          .ham
-          .ham
-          .ham
-          .ham
-          .ham
-      ul.main_menu
-        li
-          a#menu_company(href='#about_page') ABOUT US
-        li
-          a#menu_client() CLIENT REFFERENCE
-        li
-          a#menu_gallery() GALLERIES
-        li
-          a#menu_contact(href='#contact_page') CONTACT
-      ul.sub_menu.client
-        li#sub_menu.workflow
-          a(href='#workflow_page') Work Flow
-        li
-          a(href='#making_page') Making
-        //li
-          a(href='#qna_page') Q&A//
-      ul.sub_menu.gallery
-        li
-          a(href='/galleries_movement') Movement
-        li
-          a(href='/galleries_portrait') Portrait
-    .wrapper_gallery
-      .contents.gallery
-        #title GALLERIES
-        .m-p-g
-          .m-p-g__thumbs(data-google-image-layout='', data-max-height='350')
-            img.m-p-g__thumbs-img(src='../images/movements/mv1_2714.jpg?image=940', data-full='../images/movements/mv1_2714.jpg?image=940')
-            img.m-p-g__thumbs-img(src='../images/movements/mv2_2727.jpg?image=940', data-full='../images/movements/mv2_2727.jpg?image=940')
+              a(href='#making_page') Making
+          ul.sub_menu.gallery
+            li
+              a(href='/galleries_movement') Movement
+            li
+              a(href='/galleries_portrait') Portrait
+      .wrapper_gallery
+        .contents.gallery
+          #title
+            span GALLERIES
+          .m-p-g
+            .m-p-g__thumbs(data-google-image-layout='', data-max-height='350')
+              img.m-p-g__thumbs-img(src='../images/movements/mv1_2714.jpg?image=940', data-full='../images/movements/mv1_2714.jpg?image=940')
+              img.m-p-g__thumbs-img(src='../images/movements/mv2_2727.jpg?image=940', data-full='../images/movements/mv2_2727.jpg?image=940')
 
-            img.m-p-g__thumbs-img(src='../images/movements/mv3_2690.jpg?image=940', data-full='../images/movements/mv3_2690.jpg?image=940')
-            img.m-p-g__thumbs-img(src='../images/movements/mv4_2990.jpg?image=940', data-full='../images/movements/mv4_2990.jpg?image=940')
+              img.m-p-g__thumbs-img(src='../images/movements/mv3_2690.jpg?image=940', data-full='../images/movements/mv3_2690.jpg?image=940')
+              img.m-p-g__thumbs-img(src='../images/movements/mv4_2990.jpg?image=940', data-full='../images/movements/mv4_2990.jpg?image=940')
 
-            img.m-p-g__thumbs-img(src='../images/movements/mv5_3735.jpg?image=940', data-full='../images/movements/mv5_3735.jpg?image=940')
-            img.m-p-g__thumbs-img(src='../images/movements/mv6_2796.jpg?image=940', data-full='../images/movements/mv6_2796.jpg?image=940')
-          .m-p-g__fullscreen
+              img.m-p-g__thumbs-img(src='../images/movements/mv5_3735.jpg?image=940', data-full='../images/movements/mv5_3735.jpg?image=940')
+              img.m-p-g__thumbs-img(src='../images/movements/mv6_2796.jpg?image=940', data-full='../images/movements/mv6_2796.jpg?image=940')
+            .m-p-g__fullscreen
   script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
   script(src='/javascripts/material-photo-gallery.js')
   script.
