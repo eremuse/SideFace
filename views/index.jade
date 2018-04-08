@@ -8,111 +8,101 @@ html
   body
     .main
       .wrapper.bg_index
-        a(href='/')
-          img#logo(src='../images/icons/main_logo.png')
-        #mySidenav.sidenav
-          .sidenav_box
-            a.closebtn(href='javascript:void(0)', onclick='closeNav()') ×
-            ul.side_menu_list
-              li
-                a(href='/')
-                  img#side_menu_logo(src='../images/icons/main_logo.png')
-              li
-                a(href='#about_page') ABOUT US
-              li
-                a(href='') CLIENTS
-                .side_menu_inside
-                  a(href='#workflow_page') Work Flow
-                  a(href='#making_page') Making
-              li
-                a(href='') GALLERIES
-                .side_menu_inside
-                  a(href='/galleries_movement') Movement
-                  a(href='/galleries_portrait') Portrait
-              li
-                a.list4#side_main(href='#contact_page') CONTACT
-        #main.main_menu_hamberger
-          span(onclick='openNav()')
-            .ham
-            .ham
-            .ham
-            .ham
-            .ham
-        ul.main_menu
-          li
-            a#menu_company(href='#about_page') ABOUT US
-          li
-            a#menu_client() CLIENT REFFERENCE
-          li
-            a#menu_gallery() GALLERIES
-          li
-            a#menu_contact(href='#contact_page') CONTACT
-        ul.sub_menu.client
-          li#sub_menu.workflow
-            a(href='#workflow_page') Work Flow
-          li
-            a(href='#making_page') Making
-          //li
-            a(href='#qna_page') Q&A//
-        ul.sub_menu.gallery
-          li
-            a(href='/galleries_movement') Movement
-          li
-            a(href='/galleries_portrait') Portrait
+        .container
+          img#index_bg_img(src="../images/movements/mv1_2714.jpg")
+          a(href='/')
+            img#logo(src='../images/icons/main_logo.png')
+          #mySidenav.sidenav
+            .sidenav_box
+              a.closebtn(href='javascript:void(0)', onclick='closeNav()') ×
+              ul.side_menu_list
+                li
+                  a(href='/')
+                    img#side_menu_logo(src='../images/icons/main_logo.png')
+                li
+                  a(href='#about_page') ABOUT US
+                li
+                  a(href='') CLIENTS
+                  .side_menu_inside
+                    a(href='#workflow_page') Work Flow
+                    a(href='#making_page') Making
+                li
+                  a(href='') GALLERIES
+                  .side_menu_inside
+                    a(href='/galleries_movement') Movement
+                    a(href='/galleries_portrait') Portrait
+                li
+                  a.list4#side_main(href='#contact_page') CONTACT
+          #main.main_menu_hamberger
+            span(onclick='openNav()')
+              .ham
+              .ham
+              .ham
+              .ham
+              .ham
+          ul.main_menu
+            li
+              a#menu_company(href='#about_page') ABOUT US
+            li
+              a#menu_client() CLIENT REFFERENCE
+            li
+              a#menu_gallery() GALLERIES
+            li
+              a#menu_contact(href='#contact_page') CONTACT
+          ul.sub_menu.client
+            li#sub_menu.workflow
+              a(href='#workflow_page') Work Flow
+            li
+              a(href='#making_page') Making
+            //li
+              a(href='#qna_page') Q&A//
+          ul.sub_menu.gallery
+            li
+              a(href='/galleries_movement') Movement
+            li
+              a(href='/galleries_portrait') Portrait
       .wrapper.bg_about#about_page
         .container
+          img#about_bg_img(src="../images/movements/sf_0859.jpg")
           .contents.about
             #title ABOUT US
-            .about_box
-              .crew_boxes
-                img(src='../images/movements/sf_0859.jpg')
-              #title_inside_about "Taking a moment is a skill,<br/>but making a moment is an art."
-              .txt_box
-                #discription 찰나의 순간 움직임을 담는다. 그 순간은 찍는 것이 아니라 이제는 만들어 내야 합니다. 인간의 몸으로 표현 할 수 있는 최고의 순간. 그 타이밍은 음악도 영상도 그 외에 어떤 매개체로도 정확한 본질을 표현 하기 힘들다고 생각합니다. 순간의 영원함을 표현할 수 있는 것은 오직 사진 뿐 입니다.
+            #quote "Taking a moment is a skill,<br/>but making a moment is an art."
+            #discription 찰나의 순간 움직임을 담는다. 그 순간은 찍는 것이 아니라 이제는 만들어 내야 합니다. 인간의 몸으로 표현 할 수 있는 최고의 순간.
+                그 타이밍은 음악도 영상도 그 외에 어떤 매개체로도 정확한 본질을 표현 하기 힘들다고 생각합니다. 순간의 영원함을 표현할 수 있는 것은 오직 사진 뿐 입니다.
       .wrapper.bg_empty_3#workflow_page
         .container
+          img#workflow_bg_img(src="../images/movements/DSC05232.jpg")
           .contents.workflow
             #title
               span WORK FLOW
             .step_box
               .step1
-                #img_box
-                  span.step_txt Step1
-                  img(src='../images/consulting_sample.jpg')
                 #txt_box
                   #quote Cunsulting
                   #discription 촬영 과정에 대한 전반적인 사항을 문의 할 수 있습니다.대부분은 온라인으로 상담이 이루어 지며 요구 사항에 따라서 오프라인으로 미팅이 이루어 지기도 합니다. 제작 비용은 정해진 상품외에는 요구사항의 난이도에 따라 제 각기 다르므로 협의를 통해 결정됩니다.
               .step1
-                #img_box
-                  span.step_txt Step2
-                  img(src='../images/planning_sample.jpg')
                 #txt_box
                   #quote Planing
                   #discription 상담한 내용을 토대로 컨셉구상을 한 후 본격적으로 기획을 하는 단계입니다. 사전 미팅을 통해서 양측이 합의할 수 있는 기획안을 완성한 후에는 결과물을 예상할 수 있는 구체적인 디자인 시안을 받아 볼 수 있습니다.
               .step1
-                #img_box
-                  span.step_txt Step3
-                  img(src='../images/making_sample.jpg')
                 #txt_box
                   #quote Making
                   #discription 실제 촬영이 진행되는 단계 입니다. 제작하는 콘텐츠가 sideface 내부에서 진행하는 프로젝트와 공통되는 부분이 있을 경우에는 클라이언트와의 협의를 통해서 고퀄리티의 Making 영상제작이 함께 이루어 지기도 합니다.
               .step1
-                #img_box
-                  span.step_txt Step4
-                  img(src='../images/post_production_sample.jpg')
                 #txt_box
                   #quote PostProduction
                   #discription 제작과정에서 가장 많은 시간이 소요되는 후반 작업 단계입니다. 요구사항의 난이도와 양에 따라서 소요되는 시간은 유동적입니다. 작업이 끝난 콘텐츠에 대해서 추가 요청이나 수정사항이 있을 경우에는 별도의 제작비가 발생할 수 있습니다.
       .wrapper.bg_empty_4#making_page
         .container
+          img#making_bg_img(src="../images/movements/DSC05414.jpg")
           .contents.making
             #title
               span MAKING
             .making_box
               .making
                 img(src='../images/youtube_empty.png')
-                #txt_box
-                  #quote Rebok Crossfit<br>Gangam
+              //#txt_box
+                  #quote Ive Pilates Studio
                   #discription Date: 2018. 2. 14
                   #discription Location: Seoul
                   #discription Type: Potrait
@@ -120,85 +110,24 @@ html
                     img.sns_box.instagram(src='../images/icons/instagram_ico_empty.png')
                     img.sns_box.facebook(src='../images/icons/facebook_ico_empty.png')
                     img.sns_box.kakao(src='../images/icons/kakao_ico_empty.png')
-                    img.sns_box.naver(src='../images/icons/naver_ico_empty.png')
-              .making
-                img(src='../images/youtube_empty.png')
-                #txt_box
-                  #quote Pliates Jeff Studio
-                  #discription Date: 2018. 2. 14
-                  #discription Location: Seoul
-                  #discription Type: Movement
-                  .sns_boxes
-                    img.sns_box.instagram(src='../images/icons/instagram_ico_empty.png')
-                    img.sns_box.facebook(src='../images/icons/facebook_ico_empty.png')
-                    img.sns_box.kakao(src='../images/icons/kakao_ico_empty.png')
-                    img.sns_box.naver(src='../images/icons/naver_ico_empty.png')
-              .making
-                img(src='../images/youtube_empty.png')
-                #txt_box
-                  #quote Rebok Crossfit<br>Gangam Gym
-                  #discription Date: 2018. 2. 14
-                  #discription Location: Seoul
-                  #discription Type: Potrait
-                  .sns_boxes
-                    img.sns_box.instagram(src='../images/icons/instagram_ico_empty.png')
-                    img.sns_box.facebook(src='../images/icons/facebook_ico_empty.png')
-                    img.sns_box.kakao(src='../images/icons/kakao_ico_empty.png')
-                    img.sns_box.naver(src='../images/icons/naver_ico_empty.png')
-      //.wrapper.bg_empty_6#qna_page
-        .container
-          .contents.qna
-            #title
-              span Q&A
-            .qna_box
-              .qna.q1
-                span.qna_txt Q1
-                #quote “Movement is the song of the body.”
-                #discription
-                  span A long awaited reprint of this classical work revised by Vanda’s daughter and based on extensive notes left by the author allowing the book to be published for the first time as Vanda intended. Even if you have the first edition, it’s still worth investing in this one to see how Vanda’s ideas subtly changed. Superbly illustrated with
-              .qna.q2
-                span.qna_txt Q2
-                #quote “Movement is the song of the body.”
-                #discription
-                  span A long awaited reprint of this classical work revised by Vanda’s daughter and based on extensive notes left by the author allowing the book to be published for the first time as Vanda intended. Even if you have the first edition, it’s still worth investing in this one to see how Vanda’s ideas subtly changed. Superbly illustrated with
-              .qna.q3
-                span.qna_txt Q3
-                #quote “Movement is the song of the body.”
-                #discription
-                  span A long awaited reprint of this classical work revised by Vanda’s daughter and based on extensive notes left by the author allowing the book to be published for the first time as Vanda intended. Even if you have the first edition, it’s still worth investing in this one to see how Vanda’s ideas subtly changed. Superbly illustrated with
-              .qna.q4
-                span.qna_txt Q4
-                #quote “Movement is the song of the body.”
-                #discription
-                  span A long awaited reprint of this classical work revised by Vanda’s daughter and based on extensive notes left by the author allowing the book to be published for the first time as Vanda intended. Even if you have the first edition, it’s still worth investing in this one to see how Vanda’s ideas subtly changed. Superbly illustrated with
-              .qna.q5
-                span.qna_txt Q5
-                #quote “Movement is the song of the body.”
-                #discription
-                  span A long awaited reprint of this classical work revised by Vanda’s daughter and based on extensive notes left by the author allowing the book to be published for the first time as Vanda intended. Even if you have the first edition, it’s still worth investing in this one to see how Vanda’s ideas subtly changed. Superbly illustrated with
-              .qna.q6
-                span.qna_txt Q6
-                #quote “Movement is the song of the body.”
-                #discription
-                  span A long awaited reprint of this classical work revised by Vanda’s daughter and based on extensive notes left by the author allowing the book to be published for the first time as Vanda intended. Even if you have the first edition, it’s still worth investing in this one to see how Vanda’s ideas subtly changed. Superbly illustrated with//
+                    img.sns_box.naver(src='../images/icons/naver_ico_empty.png')//
       .wrapper.bg_empty_7#contact_page
         .container
+          img#making_bg_img(src='../images/aboutme.jpg')
           .contents.contact
+            #title CONTACT US
             .contact_box
-              #title CONTACT US
-              .contact_photo_box
-                img.contact(src='../images/aboutme.jpg')
-                #nickname Riverin
-                ul
-                  li +82 10-5818-3320
-                  li 99816636k@gmail.com
-                  li 343, Samil-daero, Jung-gu
-                  li Seoul, 04538, Rep.of KOREA
-                .sns_boxes
-                  img.sns_box.instagram(src='../images/icons/instagram_ico_empty.png')
-                  img.sns_box.facebook(src='../images/icons/facebook_ico_empty.png')
-                  img.sns_box.kakao(src='../images/icons/kakao_ico_empty.png')
-                  img.sns_box.naver(src='../images/icons/naver_ico_empty.png')
+              #nickname Riverin
+              ul
+                li +82 10-5818-3320
+                li 99816636k@gmail.com
+                li 343, Samil-daero, Jung-gu
+                li Seoul, 04538, Rep.of KOREA
+              .sns_boxes
+                img.sns_box.instagram(src='../images/icons/instagram_ico_empty.png')
+                img.sns_box.facebook(src='../images/icons/facebook_ico_empty.png')
+                img.sns_box.kakao(src='../images/icons/kakao_ico_empty.png')
+                img.sns_box.naver(src='../images/icons/naver_ico_empty.png')
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
     script.
       $(document).ready(function() {

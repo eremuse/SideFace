@@ -20,38 +20,25 @@ li {
   height: 100%;
 }
 .wrapper {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
+  position: relative;
+  display: inline-block;
   border-top: 1px solid #979797;
-  z-index: -1;
-}
-.wrapper.bg_index {
-  background-image: url("../images/movements/mv1_2714.jpg");
-  background-size: 200%;
-  background-position: 83% 35%;
-  top: 0;
-}
-.wrapper.bg_about {
-  top: 100%;
-  z-index: -2;
+  width: 100%;
 }
 
-.wrapper.bg_empty_3 {
-  top: 230%;
-  z-index: -2;
+#index_bg_img {
+  width: 1920px;
+  height: 100%;
+  z-index: -100;
+}
+#about_bg_img,
+#workflow_bg_img,
+#making_bg_img {
+  width: 100%;
+  opacity: 0.5;
+  z-index: -100;
 }
 
-.wrapper.bg_empty_4 {
-  top: 390%;
-  z-index: -2;
-}
-.wrapper.bg_empty_7 {
-  top: 570%;
-  z-index: -2;
-}
 .wrapper.bg_empty_8 {
   top: 0;
   z-index: -2;
@@ -62,7 +49,7 @@ li {
   right: 0;
   width: 180px;
   margin-right: 40px;
-  z-index: 1;
+  z-index: 100;
 }
 
 ul {
@@ -73,10 +60,11 @@ ul {
 .sub_menu {
   position: fixed;
   text-align: right;
+  top: 0;
   right: 0;
   margin-top: 150px;
   margin-right: 40px;
-  z-index: 1;
+  z-index: 100;
 }
 
 .main_menu li,
@@ -158,7 +146,7 @@ ul {
 
 .side_menu_inside a {
   display: inline-block;
-  width: 250px;
+  width: 370px;
   margin-top: 15px;
   font-size: 1.7rem;
 }
@@ -181,8 +169,11 @@ ul {
 
 .container {
   max-width: 100%;
-  height: auto;
+  margin: 0;
+  padding: 0;
   color: #A09FA0;
+  overflow: hidden;
+  z-index: -100;
 }
 .contents {
   position: absolute;
@@ -192,8 +183,10 @@ ul {
 }
 #title {
   font-size: 4.5rem;
+  font-weight: bold;
   font-family: 'Maven Pro', sans-serif;
   color: #4A4A4A;
+
 }
 #quote {
   /* margin: 0 20px 0; */
@@ -206,14 +199,17 @@ ul {
   margin: 20px 0;
   width: 380px;
   font-size: 1.5rem;
-  font-weight: 100;
+  font-weight: bold;
+  line-height: 1.5;
+  color: #A09FA0;
 }
 
 .contents.workflow,
 .contents.making,
 .contents.qna,
 .contents.gallery,
-.contents.about {
+.contents.about,
+.contents.contact {
   max-width: 100%;
   top: 7%;
   left: 10%;
@@ -223,11 +219,16 @@ ul {
 .contents.making #title,
 .contents.qna #title,
 .contents.gallery #title,
-.contents.about #title {
+.contents.about #title,
+.contents .contact #title {
   width: 100%;
 }
+.contents.about #quote {
+  line-height: 1;
+  padding: 0;
+  margin: 20px 0;
+}
 
-.contents.workflow .step1,
 .contents.making .making,
 .contents.about .about_box,
 .contents.qna .qna_box {
@@ -235,35 +236,24 @@ ul {
   height: 295px;
 }
 
-.contents.about .crew_boxes,
-.contents.workflow .step_box,
-.contents.making .making_box,
 .contents.qna .qna_box,
 .m-p-g {
   border-top: 7px solid #A09FA0;
   border-right: 7px solid #A09FA0;
 }
 .making #txt_box {
-  position: relative;
-  text-align: right;
   top: -100%;
   right: 2%;
 }
 .making #txt_box .sns_boxes {
-  position: absolute;
-  right: -20px;
+  float: none;
 }
 .making #discription {
   width: 100%;
   margin: 0;
 }
-.contents.workflow .step1 {
-  height: 230px;
-}
-.about_box .txt_box {
-  width: 100%;
-  line-height: 1.5;
-}
+
+
 .contents.making .making {
   margin-top: 30px;
   font-size: 2.5rem;
@@ -272,55 +262,6 @@ ul {
   height: auto;
   border-bottom: none;
 }
-.contents.about {
-  right: auto;
-}
-.crew_boxes img {
-  width: 100%;
-}
-.crew_boxes img.height {
-  width: 15.4%;
-}
-
-
-.crew_boxes ul {
-  padding: 0;
-}
-
-.crew_boxes ul li a {
-  display: inline-block;
-  position: absolute;
-  margin: 2px 5px;
-  font-size: 3rem;
-}
-
-.txt_box.right #discription{
-  position: absolute;
-  bottom: 1.2%;
-}
-
-.txt_box #title_inside_workstyle {
-  font-size: 4rem;
-  text-align: right;
-  font-family: 'Cormorant Garamond', serif;
-}
-#title_inside_about {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 3rem;
-  font-weight: 400;
-  margin-top: 30px;
-  text-align: center;
-}
-.txt_box #title_inside_workstyle {
-  font-size: 2.5rem;
-  margin-bottom: 0;
-}
-
-.txt_box #discription {
-  width: 100%;
-  text-align: justify;
-}
-
 
 .contents.workflow .step2,
 .contents.making .making_odd {
@@ -331,7 +272,6 @@ ul {
   border-bottom: 7px solid #A09FA0;
 }
 
-span.step_txt,
 span.qna_txt {
   position: absolute;
   font-size: 2.5rem;
@@ -342,29 +282,18 @@ span.qna_txt {
   margin-left: 0;
 }
 
-.step1 #txt_box {
-  padding: 0;
-}
-.step1 #img_box  {
-  margin-top: 24px;
-  border: 1px solid #979797;
-  position: absolute;
-  width: 300px;
-}
-.step1 img {
-  width: 100%;
-  height: 200px;
-}
+
 .step1 #quote,
 .step1 #discription {
   position: relative;
-  left: 45%;
   line-height: 1.5;
+  padding: 0;
+  margin-top: 5px;
 }
 
 .step1 #quote {
-  font-size: 4rem;
-  padding-top: 15px;
+  font-size: 3rem;
+  font-weight: bold;
 }
 
 .making #img_box {
@@ -375,7 +304,7 @@ span.qna_txt {
   height: 258px;
 }
 .making img {
-  width: 60%;
+  width: 50%;
 }
 
 .making #quote {
@@ -395,17 +324,9 @@ span.qna_txt {
   padding-top: 20px;
   padding-right: 20px;
 }
-.contact_box {
-  width: 108%;
-}
 
-.contact_box .sns_boxes {
-  float: none;
-  margin-top: 10px;
-  padding: 0;
-}
-.making .sns_box,
-.contact .sns_box {
+
+.making .sns_box, {
   width: 35px;
   margin-left: 10px;
 }
@@ -462,67 +383,27 @@ span.qna_txt {
   margin-right: 15px;
 }
 
-span.qna.qna_txt {
-  padding: 0;
-}
-.qna #quote {
-  padding-left: 45px;
-}
-.qna #img_box {
-  margin-top: 20px;
-  border: 1px solid #979797;
-  position: absolute;
-  width: 95%;
-  height: 100%;
-}
-
-.qna #discription {
-  border: 1px solid #979797;
-  padding: 20px;
-  padding-right: 0px;
-  width: 750px;
-}
-.contents.contact {
-  position: absolute;
-  top: 10%;
-  left: 30%;
-}
-.contact_empty_box1,
-.contact_empty_box2 {
-  border: 3.5px solid #979797;
-  position: absolute;
-  left: 0;
-  height: 80px;
-
-}
-.contact_empty_box2 {
-  top: 650%;
-}
-.contact_box #title {
-  width: 140%;
-}
-.contact_box #nickname {
-  font-size: 4rem;
-  opacity: 0.5;
-  font-family: 'Cormorant Garamond', serif;
-}
-.contact_box #discription {
-  font-size: 3rem;
-}
 .contact_box ul {
-  font-size: 1.8rem;
-  margin-top: 10px;
+  text-align: left;
   padding: 0;
+  font-size: 2rem;
 }
-.contact_photo_box img.contact {
-  width: 400px;
-  border-top: 7px solid #979797;
-  border-right: 7px solid #979797;
-  margin-bottom: 30px;
+.contact_box ul li {
+  color: #A09FA0;
 }
-.contact_photo_box {
-  text-align: center;
+.contact_box .sns_boxes {
+  float: none;
 }
+.contact_box .sns_box {
+  width: 35px;
+  margin-right: 10px;
+}
+#nickname {
+  font-size: 3.5rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: bold;
+}
+
 
 .m-p-g {
   display: inline-block;
@@ -536,6 +417,8 @@ span.qna.qna_txt {
   top: 7px;
 }
 
+
+
 @media only screen and (max-width: 1024px) {
   .main_menu {
     display: none;
@@ -543,105 +426,71 @@ span.qna.qna_txt {
   .main_menu_hamberger {
     display: block;
   }
-  .making #txt_box .sns_boxes {
-    padding-top: 10px;
-  }
 }
 
-@media only screen and (max-width: 768px) {
-  .contents.workflow,
-  .contents.making,
-  .contents.qna,
-  .contents.gallery,
-  .contents.about {
-    top: 12%;
-    left: 0;
-  }
-  .m-p-g {
-    margin: 0 4%;
-  }
-}
-@media only screen and (max-width: 736px) {
-  .wrapper.bg_empty_3 {
-    top: 310%;
-  }
-  .wrapper.bg_empty_4 {
-    top: 570%;
-  }
-  .wrapper.bg_empty_7 {
-    top: 850%;
-  }
-  .step1 #quote, .step1 #discription {
-    left: 0;
-  }
-  .contents.workflow,
-  .contents.making,
-  .contents.qna,
-  .contents.gallery,
-  .contents.about {
-    left: 3%;
-    width: 100%;
-  }
-  .contents.workflow .step1,
-  .contents.making .making,
-  .contents.about .about_box,
-  .contents.qna .qna_box {
-    width: 100%;
-  }
-  .step1 img {
-    width: 70%;
-    height: 70%;
-  }
-}
+
 
 @media only screen and (max-width: 485px) {
-  .wrapper.bg_index {
-    width: 105%;
-    height: 105%;
-    background-size: 296%;
-    background-position: 61% 6%;
+  .side_menu_inside a {
+    width: 250px;
   }
-  .wrapper.bg_about {
-    top: 110%;
+  #index_bg_img {
+    position: relative;
+    left: -97%;
+    width: 267%;
   }
-  .wrapper.bg_empty_3 {
-    width: 105%;
-    top: 215%;
+  #about_bg_img,
+  #workflow_bg_img,
+  #making_bg_img {
+    position: relative;
+    left: -97%;
+    width: 267%;
   }
-  .wrapper.bg_empty_4 {
-    width: 105%;
-    top: 370%;
+  #workflow_bg_img {
+    left: -120%;
   }
-  .wrapper.bg_empty_7 {
-    width: 105%;
-    top: 510%;
+  #making_bg_img {
+    left: -70%;
   }
+
   #logo {
     width: 25%;
     top: 3%;
     right: -24px;
+    z-index: 0;
   }
   .main_menu_hamberger {
     top: 24px;
     left: -18px;
+    z-index: 1;
+  }
+  #discription {
+    font-size: 1.3rem;
   }
   .contents.about,
   .contents.workflow,
-  .contents.making,
-  .contents.qna,
+  .contents.making
   .contents.contact {
     top: 12%;
     left: 4.5%;
     height: 100%;
   }
+  .contents.about {
+    top: 56%;
+    height: 50%;
+  }
   .contents.gallery {
     top: 12%;
     left: 0;
   }
-  .contents.workflow,
-  .contents.making {
-    max-width: 92%;
+  .contents.workflow {
     top: 12%;
+  }
+  .contents.making {
+    top: 66%;
+  }
+  .contents.contact {
+    top: 54%;
   }
 
   .contents.workflow #title,
@@ -656,23 +505,17 @@ span.qna.qna_txt {
     width: 300px;
     height: 30px;
   }
-  #title_inside_about {
-    font-size: 2.5rem;
-  }
+
   .contents.gallery #title {
     margin-left: 3%;
     margin-bottom: 0;
   }
-  .contents.about .crew_boxes,
-  .contents.workflow .step_box,
-  .contents.making .making_box,
-  .contents.qna .qna_box,
-  .contact_photo_box img.contact {
-    border-top: 5px solid #A09FA0;
-    border-right: 5px solid #A09FA0;
+
+  .contents.making .making_box {
+    margin-top: -15px;
   }
   .contents.about .about_box {
-    width: 96%;
+    width: 400px;
     height: 100%;
   }
   .contents.qna .qna_box {
@@ -684,11 +527,9 @@ span.qna.qna_txt {
     text-align: justify;
   }
   .contents.making .making {
-    width: 86%;
+    width: 55%;
   }
-  .step1 #img_box {
-    display: none;
-  }
+
   .step1 #discription {
     margin: 0;
     width: 365px;
@@ -697,33 +538,20 @@ span.qna.qna_txt {
   .step1 #quote {
     font-size: 2.6rem;
   }
-  .contents.workflow .step1 {
-    max-width: 0%;
-  }
+
   .contents.making .making {
-    margin-top: 20px;
-    height: 230px;
+    height: 171px;
   }
   .making img {
     width: 112%;
   }
   .making #txt_box {
-    top: -90%;
-    left: 20px;
+    margin-top: 10px;
+    left: 170px;
   }
   .making #quote {
-    font-size: 2.0rem;
-  }
-  .qna #quote {
-    line-height: 1.1;
-    font-size: 2.5rem;
-  }
-  span.qna_txt {
-    font-size: 2.3rem;
-    padding-top: 5px;
-  }
-  .contact_photo_box img.contact {
-    width: 370px;
+    font-size: 1.6rem;
+    line-height: 1.2;
   }
   .m-p-g {
     margin: 4%;
@@ -734,32 +562,71 @@ span.qna.qna_txt {
 }
 
 @media only screen and (max-width: 376px) {
-  .contents.about,
-  .contents.workflow,
-  .contents.making,
-  .contents.qna,
-  .contents.contact {
-    left: 3%;
-  }
-  .contents.workflow, .contents.making {
-    max-width: 94%;
-  }
-  .contents.about .about_box {
-    width: 99%;
-  }
-  .main_menu_hamberger {
-    top: 22px;
-  }
   .main_menu_hamberger .ham {
-    height: 39px;
+    width: 39px;
+    height: 35px;
   }
-  .step1 #discription {
+  .contents.about {
+    width: 330px;
+  }
+  .contents.about #quote {
+    font-size: 2.5rem;
+  }
+  .step1 #quote, .step1 #discription {
     width: 340px;
   }
-  .making #txt_box {
-    top: -89%;
+  #discription {
+    width: 340px;
   }
-  .contact_photo_box img.contact {
-    width: 354px;
+}
+@media only screen and (max-width: 321px) {
+  .main {
+    width: 104%;
+  }
+  .main_menu_hamberger {
+    top: 17px;
+  }
+  .sidenav_box {
+    padding-top: 15%;
+  }
+  .contents.about {
+    width: 300px;
+  }
+  .contents.contact {
+    width: 300px;
+  }
+  #nickname {
+    width: 280px;
+    font-size: 3.2rem;
+  }
+  .contact_box {
+    width: 280px;
+  }
+  .contact_box ul li {
+    width: 280px;
+    font-size: 1.5rem;
+  }
+  .contents.about #quote {
+    font-size: 2.3rem;
+  }
+
+  #discription {
+    width: 280px;
+    font-size: 1rem;
+  }
+  .step1 #quote, .step1 #discription {
+    width: 290px;
+  }
+  .step1 #quote {
+    font-size: 2rem;
+  }
+  .contents.workflow #title,
+  .contents.making #title,
+  .contents.qna #title,
+  .contents.gallery #title,
+  .contents.about #title,
+  .contents.contact #title,
+  .contents.gallery #title {
+    width: 280px;
   }
 }
