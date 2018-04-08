@@ -11,26 +11,26 @@ html
       a(href='/')
         img#logo(src='../images/icons/main_logo.png')
       #mySidenav.sidenav
-        a.closebtn(href='javascript:void(0)', onclick='closeNav()') ×
-        ul
-          li
-            a.list1#side_main(href='#about_page') ABOUT US
-          li
-            a.list2#side_main(href='') CLIENTS
-            ul.inside_menu#menu1
-              li
-                a#side_sub(href='#workflow_page') Work Flow
-              li
-                a#side_sub(href='#making_page') Making
-          li
-            a.list3#side_main(href='') GALLERIES
-            ul.inside_menu#menu2
-              li
-                a#side_sub(href='/galleries_movement') Movement
-              li
-                a#side_sub(href='/galleries_portrait') Portrait
-          li
-            a.list4#side_main(href='#contact_page') CONTACT
+        .sidenav_box
+          a.closebtn(href='javascript:void(0)', onclick='closeNav()') ×
+          ul.side_menu_list
+            li
+              a(href='/')
+                img#side_menu_logo(src='../images/icons/main_logo.png')
+            li
+              a(href='#about_page') ABOUT US
+            li
+              a(href='') CLIENTS
+              .side_menu_inside
+                a(href='#workflow_page') Work Flow
+                a(href='#making_page') Making
+            li
+              a(href='') GALLERIES
+              .side_menu_inside
+                a(href='/galleries_movement') Movement
+                a(href='/galleries_portrait') Portrait
+            li
+              a.list4#side_main(href='#contact_page') CONTACT
       #main.main_menu_hamberger
         span(onclick='openNav()')
           .ham
@@ -96,7 +96,7 @@ html
       $(".sub_menu.client").hide();
     });
     function openNav() {
-      document.getElementById("mySidenav").style.width = "250px";
+      document.getElementById("mySidenav").style.width = "100%";
       document.getElementById("main").style.marginLeft = "250px";
       document.body.style.backgroundColor = "#050505";
     }
