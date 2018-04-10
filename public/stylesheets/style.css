@@ -22,7 +22,6 @@ li {
 .wrapper {
   position: relative;
   display: inline-block;
-  border-top: 1px solid #979797;
   width: 100%;
 }
 
@@ -49,7 +48,6 @@ li {
   right: 0;
   width: 180px;
   margin-right: 40px;
-  z-index: 100;
 }
 
 ul {
@@ -125,6 +123,7 @@ ul {
 
 .sidenav a {
   font-size: 2.5rem;
+  font-family: 'Maven Pro', sans-serif;
   color: #818181;
   transition: 0.3s;
 }
@@ -169,7 +168,7 @@ ul {
 
 .container {
   max-width: 100%;
-  margin: 0;
+  margin-top: -5px;
   padding: 0;
   color: #A09FA0;
   overflow: hidden;
@@ -189,18 +188,15 @@ ul {
 
 }
 #quote {
-  /* margin: 0 20px 0; */
-  padding-top: 20px;
   font-size: 3rem;
   font-family: 'Cormorant Garamond', serif;
   font-weight: 100;
 }
 #discription {
-  margin: 20px 0;
   width: 380px;
   font-size: 1.5rem;
   font-weight: bold;
-  line-height: 1.5;
+  line-height: 1.4;
   color: #A09FA0;
 }
 
@@ -224,9 +220,12 @@ ul {
   width: 100%;
 }
 .contents.about #quote {
-  line-height: 1;
-  padding: 0;
-  margin: 20px 0;
+  line-height: 1.2;
+  margin-top: 10px;
+}
+.contents.about #discription {
+  margin-top: 20px;
+  width: 390px;
 }
 
 .contents.making .making,
@@ -250,7 +249,6 @@ ul {
 
 
 .contents.making .making {
-  margin-top: 30px;
   font-size: 2.5rem;
 }
 .contents.qna .qna_box {
@@ -276,14 +274,8 @@ span.qna_txt {
   padding-top: 15px;
   margin-left: 0;
 }
-
-
-.step1 #quote,
-.step1 #discription {
-  position: relative;
-  line-height: 1.5;
-  padding: 0;
-  margin-top: 5px;
+.step_box .step1 {
+  margin-bottom: 30px;
 }
 
 .step1 #quote {
@@ -316,7 +308,6 @@ span.qna_txt {
   display: inline-block;
   width: 200px;
   float: right;
-  padding-top: 20px;
   padding-right: 20px;
 }
 
@@ -379,7 +370,6 @@ span.qna_txt {
 }
 
 .contact_box ul {
-  text-align: left;
   padding: 0;
   font-size: 2rem;
 }
@@ -391,7 +381,7 @@ span.qna_txt {
 }
 .contact_box .sns_box {
   width: 35px;
-  margin-right: 10px;
+  margin-right: 5px;
 }
 #nickname {
   font-size: 3.3rem;
@@ -413,6 +403,128 @@ span.qna_txt {
 }
 
 
+@media only screen and (min-width: 567px) and (orientation: landscape) {
+  #main {
+    left: -2%;
+    z-index: 1;
+  }
+  #logo {
+    width: 95px;
+    right: -25px;
+    z-index: 1;
+  }
+  #side_menu_logo {
+    width: 15%;
+    z-index: 2;
+  }
+  .sidenav a {
+    font-size: 2rem;
+  }
+  .side_menu_inside {
+    text-align: center;
+  }
+  .side_menu_inside a {
+    font-size: 1.5rem;
+    display: inline;
+    padding-right: 20px;
+    text-align: center;
+  }
+  .sidenav_box {
+    padding-top: 5%;
+  }
+  .side_menu_list li {
+    margin-bottom: 15px;
+  }
+  #index_bg_img {
+    width: 100%;
+  }
+  #title {
+    font-size: 2.3rem;
+  }
+  #quote {
+    font-size: 1.6rem;
+  }
+  .step_box {
+    margin-top: -5px;
+  }
+  .step1 #quote {
+    font-size: 1.8rem;
+  }
+  .step_box .step1 {
+    margin-bottom: 0px;
+    display: inline-block;
+    width: 250px;
+    height: 80px;
+  }
+  #step2 {
+    position: relative;
+    top: -14px;
+  }
+  #step3 {
+    position: relative;
+    top: -31px;
+  }
+  #step4 {
+    position: relative;
+    top: -4px;
+  }
+
+  .contents.about #quote {
+    margin-top: 5px;
+  }
+  #discription {
+    font-size: 1rem;
+  }
+  .contents.about #discription {
+    margin-top: 5px;
+    width: 380px;
+  }
+  .step1 #discription {
+    width: 230px;
+  }
+  .contents.workflow,
+  .contents.making,
+  .contents.gallery,
+  .contents.about,
+  .contents.contact {
+    top: 17%;
+    left: 3%;
+  }
+  .contents.about {
+    top: 48%;
+  }
+  .contents.making {
+    top: 42%;
+  }
+  .contents.workflow {
+    top: 24%;
+  }
+  .contents.contact {
+    top: 33%;
+  }
+  .contents.making .making, .contents.about .about_box {
+    width: 100%;
+  }
+  .making img {
+    width: 30%;
+  }
+  .contact_box ul {
+    font-size: 1.1rem;
+  }
+  #nickname {
+    font-size: 1.8rem;
+  }
+  .contact_box .sns_box {
+    margin-top: -10px;
+    width: 25px;
+  }
+}
+@media only screen and (min-width: 811px) and (orientation: landscape) {
+  .step_box .step1 {
+    width: 260px;
+  }
+}
+
 
 @media only screen and (max-width: 485px) {
   .side_menu_inside a {
@@ -431,7 +543,7 @@ span.qna_txt {
     width: 267%;
   }
   #workflow_bg_img {
-    left: -120%;
+    left: -106%;
   }
   #making_bg_img {
     left: -70%;
@@ -448,9 +560,7 @@ span.qna_txt {
     left: -18px;
     z-index: 1;
   }
-  #discription {
-    font-size: 1.2rem;
-  }
+
   .contents.about,
   .contents.workflow,
   .contents.making
@@ -463,6 +573,10 @@ span.qna_txt {
     top: 56%;
     height: 50%;
   }
+  .contents.about #discription {
+    width: 330px;
+    font-size: 1.3rem;
+  }
   .contents.gallery {
     top: 12%;
     left: 0;
@@ -471,10 +585,12 @@ span.qna_txt {
     top: 12%;
   }
   .contents.making {
-    top: 65%;
+    top: 64%;
+    left: 4%;
   }
   .contents.contact {
-    top: 54%;
+    top: 60%;
+    left: 4%;
   }
 
   .contents.workflow #title,
@@ -495,11 +611,15 @@ span.qna_txt {
   }
 
   .contents.making .making_box {
-    margin-top: -15px;
+    margin-top: 20px;
   }
   .contents.about .about_box {
     width: 400px;
     height: 100%;
+  }
+  .contents.about #quote {
+    font-size: 2.6rem;
+    margin-top: 22px;
   }
   .contents.qna .qna_box {
     width: 96.5%;
@@ -510,15 +630,18 @@ span.qna_txt {
 
   .step1 #discription {
     margin: 0;
-    width: 365px;
-    text-align: justify;
+    width: 200px;
+    font-size: 1.3rem;
   }
   .step1 #quote {
-    font-size: 2.6rem;
+    font-size: 2.5rem;
   }
   .contact_box,
   .step_box {
     margin-top: 15px;
+  }
+  .step_box .step1 {
+    margin-bottom: 10px;
   }
   .contact_box ul li {
     font-size: 1.6rem;
@@ -546,6 +669,9 @@ span.qna_txt {
   .m-p-g__fullscreen.active {
     height: 100%;
   }
+  #nickname {
+    font-size: 3rem;
+  }
 }
 
 @media only screen and (max-width: 376px) {
@@ -553,22 +679,82 @@ span.qna_txt {
     width: 39px;
     height: 35px;
   }
+  .contents.workflow #title,
+  .contents.making #title,
+  .contents.qna #title,
+  .contents.gallery #title,
+  .contents.about #title,
+  .contents.contact #title,
+  .contents.gallery #title {
+    font-size: 2.8rem;
+  }
+  .side_menu_list li {
+    margin-bottom: 25px;
+  }
   .contents.about {
     width: 330px;
   }
   .contents.about #quote {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
+  }
+  .contents.about #discription {
+    font-size: 1.2rem;
   }
   .step1 #quote, .step1 #discription {
     width: 340px;
+  }
+  .step1 #discription {
+    width: 200px;
+    font-size: 1.2rem;
+  }
+  .step1 #quote {
+    font-size: 2.3rem;
+  }
+  .contents.making {
+    top: 62%;
+  }
+  .contents.contact {
+    top: 59%;
   }
   #discription {
     width: 340px;
   }
   .contact_box ul li {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+  }
+  .contact_box .sns_box {
+    width: 30px;
+  }
+  #nickname {
+    font-size: 2.6rem;
   }
 }
+
+@media only screen and (min-height: 811px) and (max-height: 1023px) {
+  .sidenav_box {
+    padding-top: 40%;
+  }
+  #index_bg_img,
+  #about_bg_img,
+  #workflow_bg_img,
+  #making_bg_img {
+    width: 325%;
+    left: -122%;
+  }
+  #about_bg_img {
+    left: -138%;
+  }
+  #workflow_bg_img {
+    left: -151%;
+  }
+  #making_bg_img {
+    left: -102%;
+  }
+  .contents.about #discription {
+    width: 280px;
+  }
+}
+
 @media only screen and (max-width: 321px) {
   .main {
     width: 100%;
@@ -578,35 +764,49 @@ span.qna_txt {
     left: -20px;
   }
   .sidenav_box {
-    padding-top: 15%;
+    padding-top: 25%;
   }
+  .sidenav a {
+    font-size: 2rem;
+  }
+  .side_menu_inside a {
+    font-size: 1.3rem;
+  }
+  .side_menu_list li {
+    margin-bottom: 15px;
+  }
+
   .contents.about {
     width: 300px;
   }
   .contents.contact {
     width: 300px;
   }
-  #nickname {
-    width: 280px;
-    font-size: 3.2rem;
-  }
+
   .contact_box {
     width: 280px;
-  }
-  .contact_box ul li {
-    width: 280px;
-    font-size: 1.5rem;
-  }
-  .contents.about #quote {
-    font-size: 2.3rem;
+    margin-top: 5px;
   }
 
-  #discription {
-    width: 280px;
-    font-size: 1rem;
+  .contents.about #quote {
+    margin-top: 15px;
+    font-size: 2rem;
   }
+
   .step1 #quote, .step1 #discription {
-    width: 290px;
+    width: 280px;
+  }
+  .step1 #discription {
+    font-size: 1.1rem;
+    width: 200px;
+  }
+  .contents.about #discription {
+    font-size: 1.1rem;
+    width: 240px;
+    margin-top: 10px;
+  }
+  .step_box {
+    margin-top: 10px;
   }
   .step1 #quote {
     font-size: 2rem;
@@ -619,12 +819,25 @@ span.qna_txt {
   .contents.contact #title,
   .contents.gallery #title {
     width: 280px;
+    font-size: 2.6rem;
+  }
+  .contents.making {
+    top: 61%;
+  }
+  .contents.making .making_box {
+    margin-top: 15px;
   }
   .contents.gallery #title {
     margin-left: 4%;
   }
   .contact_box ul li {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+  }
+  #nickname {
+    font-size: 2.4rem;
+  }
+  .contact_box .sns_box {
+    width: 25px;
   }
   .m-p-g {
     width: 100%;
