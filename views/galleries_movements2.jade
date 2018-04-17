@@ -1,0 +1,117 @@
+html
+  head
+    title Movements II
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous")
+    link(rel='stylesheet', href='/stylesheets/normalize.css')
+    link(rel='stylesheet', href='/stylesheets/material-photo-gallery.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    .main
+      .wrapper
+        .container
+          a(href='/')
+            img#logo(src='../images/icons/logo_mobile.png')
+          #mySidenav.sidenav
+            .sidenav_box
+              a.closebtn(href='javascript:void(0)', onclick='closeNav()') ×
+              a#side_menu_logo(href='/')
+                img(src='../images/icons/logo_side_menu.png')
+              .side_menu_contents
+                ul.side_menu_list.side_gallery
+                  li
+                    a(href='') GALLERIES
+                    .side_menu_inside
+                      a(href='/galleries_movements1') Movements I
+                      a(href='/galleries_movements2') Movements II
+                      a(href='/galleries_profiles') Profiles
+                      a(href='/galleries_portraits') Portraits
+                ul.side_menu_list
+                  li
+                    a(href='/#about_page') ABOUT US
+                  li
+                    a(href='') CLIENTS
+                    .side_menu_inside
+                      a(href='/#workflow_page') Work Flow
+                      a(href='/#making_page') Making
+                  li
+                    a.list4#side_main(href='/#contact_page') CONTACT
+          #main.main_menu_hamberger
+            span(onclick='openNav()')
+              .ham
+              .ham
+              .ham
+              .ham
+              .ham
+          ul.main_menu
+            li
+              a#menu_company(href='/#about_page') ABOUT US
+            li
+              a#menu_client() CLIENT REFFERENCE
+            li
+              a#menu_gallery() GALLERIES
+            li
+              a#menu_contact(href='/contact_page#contact_page') CONTACT
+          ul.sub_menu.client
+            li#sub_menu.workflow
+              a(href='#workflow_page') Work Flow
+            li
+              a(href='#making_page') Making
+          ul.sub_menu.gallery
+            li
+              a(href='/galleries_movements1') Movements I
+            li
+              a(href='/galleries_movements2') Movements II
+            li
+              a(href='/galleries_profiles') Profiles
+      .wrapper_gallery
+        .contents.gallery
+          #title
+            span GALLERIES
+          .m-p-g
+            .m-p-g__thumbs(data-google-image-layout='', data-max-height='350')
+              img.m-p-g__thumbs-img(src='../images/movements2/movements2_01.jpg?image=940', data-full='../images/movements2/movements2_01.jpg?image=940')
+              img.m-p-g__thumbs-img(src='../images/movements2/movements2_02.jpg?image=940', data-full='../images/movements2/movements2_02.jpg?image=940')
+              img.m-p-g__thumbs-img(src='../images/movements2/movements2_03.jpg?image=940', data-full='../images/movements2/movements2_03.jpg?image=940')
+              img.m-p-g__thumbs-img(src='../images/movements2/movements2_04.jpg?image=940', data-full='../images/movements2/movements2_04.jpg?image=940')
+              img.m-p-g__thumbs-img(src='../images/movements2/movements2_05.jpg?image=940', data-full='../images/movements2/movements2_05.jpg?image=940')
+              img.m-p-g__thumbs-img(src='../images/movements2/movements2_06.jpg?image=940', data-full='../images/movements2/movements2_06.jpg?image=940')
+              img.m-p-g__thumbs-img(src='../images/movements2/movements2_07.jpg?image=940', data-full='../images/movements2/movements2_07.jpg?image=940')
+              img.m-p-g__thumbs-img(src='../images/movements2/movements2_08.jpg?image=940', data-full='../images/movements2/movements2_08.jpg?image=940')
+              img.m-p-g__thumbs-img(src='../images/movements2/movements2_09.jpg?image=940', data-full='../images/movements2/movements2_09.jpg?image=940')
+              img.m-p-g__thumbs-img(src='../images/movements2/movements2_10.jpg?image=940', data-full='../images/movements2/movements2_10.jpg?image=940')
+              img.m-p-g__thumbs-img(src='../images/movements2/movements2_11.jpg?image=940', data-full='../images/movements2/movements2_11.jpg?image=940')
+              img.m-p-g__thumbs-img(src='../images/movements2/movements2_12.jpg?image=940', data-full='../images/movements2/movements2_12.jpg?image=940')
+            .m-p-g__fullscreen
+  script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+  script(src='/javascripts/material-photo-gallery.js')
+  script.
+    var elem = document.querySelector('.m-p-g');
+    document.addEventListener('DOMContentLoaded', function() {
+    var gallery = new MaterialPhotoGallery(elem);
+    });
+    $("#menu_company").click(function(){
+      $(".sub_menu.company").show();
+      $(".sub_menu.client").hide();
+      $(".sub_menu.gallery").hide();
+    });
+    $("#menu_client").click(function(){
+      $(".sub_menu.client").show();
+      $(".sub_menu.company").hide();
+      $(".sub_menu.gallery").hide();
+    });
+    $("#menu_gallery").click(function(){
+      $(".sub_menu.gallery").show();
+      $(".sub_menu.company").hide();
+      $(".sub_menu.client").hide();
+    });
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "100%";
+      document.getElementById("main").style.marginLeft = "250px";
+      document.body.style.backgroundColor = "#050505";
+    }
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("main").style.marginLeft= "0";
+      document.body.style.backgroundColor = "#050505";
+    }

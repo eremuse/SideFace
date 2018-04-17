@@ -1,6 +1,24 @@
 doctype html
 html
   head
+    title SideFace Home
+    link(rel="apple-touch-icon" sizes="57x57" href="..images/icons/favicon/apple-icon-57x57.png")
+    link(rel="apple-touch-icon" sizes="60x60" href="..images/icons/favicon/apple-icon-60x60.png")
+    link(rel="apple-touch-icon" sizes="72x72" href="..images/icons/favicon/apple-icon-72x72.png")
+    link(rel="apple-touch-icon" sizes="76x76" href="..images/icons/favicon/apple-icon-76x76.png")
+    link(rel="apple-touch-icon" sizes="114x114" href="..images/icons/favicon/apple-icon-114x114.png")
+    link(rel="apple-touch-icon" sizes="120x120" href="..images/icons/favicon/apple-icon-120x120.png")
+    link(rel="apple-touch-icon" sizes="144x144" href="..images/icons/favicon/apple-icon-144x144.png")
+    link(rel="apple-touch-icon" sizes="152x152" href="..images/icons/favicon/apple-icon-152x152.png")
+    link(rel="apple-touch-icon" sizes="180x180" href="..images/icons/favicon/apple-icon-180x180.png")
+    link(rel="icon" type="image/png" sizes="192x192"  href="..images/icons/favicon/android-icon-192x192.png")
+    link(rel="icon" type="image/png" sizes="32x32" href="..images/icons/favicon/favicon-32x32.png")
+    link(rel="icon" type="image/png" sizes="96x96" href="..images/icons/favicon/favicon-96x96.png")
+    link(rel="icon" type="image/png" sizes="16x16" href="..images/icons/favicon/favicon-16x16.png")
+    link(rel="manifest" href="/manifest.json")
+    meta(name="msapplication-TileColor" content="#ffffff")
+    meta(name="msapplication-TileImage" content="/ms-icon-144x144.png")
+    meta(name="theme-color" content="#ffffff")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous")
     link(rel='stylesheet', href='/stylesheets/normalize.css')
@@ -11,28 +29,31 @@ html
         .container
           img#index_bg_img(src="../images/movements/mv1_2714.jpg")
           a(href='/')
-            img#logo(src='../images/icons/main_logo.png')
+            img#logo(src='../images/icons/logo_mobile.png')
           #mySidenav.sidenav
             .sidenav_box
               a.closebtn(href='javascript:void(0)', onclick='closeNav()') ×
-              ul.side_menu_list
-                li
-                  a(href='/')
-                    img#side_menu_logo(src='../images/icons/main_logo.png')
-                li
-                  a(href='#about_page') ABOUT US
-                li
-                  a(href='') CLIENTS
-                  .side_menu_inside
-                    a(href='#workflow_page') Work Flow
-                    a(href='#making_page') Making
-                li
-                  a(href='') GALLERIES
-                  .side_menu_inside
-                    a(href='/galleries_movement') Movement
-                    a(href='/galleries_portrait') Portrait
-                li
-                  a.list4#side_main(href='#contact_page') CONTACT
+              a#side_menu_logo(href='/')
+                img(src='../images/icons/logo_side_menu.png')
+              .side_menu_contents
+                ul.side_menu_list.side_gallery
+                  li
+                    a(href='') GALLERIES
+                    .side_menu_inside
+                      a(href='/galleries_movements1') Movements I
+                      a(href='/galleries_movements2') Movements II
+                      a(href='/galleries_profiles') Profiles
+                      a(href='/galleries_portraits') Portraits
+                ul.side_menu_list
+                  li
+                    a(href='#about_page') ABOUT US
+                  li
+                    a(href='') CLIENTS
+                    .side_menu_inside
+                      a(href='#workflow_page') Work Flow
+                      a(href='#making_page') Making
+                  li
+                    a.list4#side_main(href='#contact_page') CONTACT
           #main.main_menu_hamberger
             span(onclick='openNav()')
               .ham
@@ -56,21 +77,26 @@ html
               a(href='#making_page') Making
           ul.sub_menu.gallery
             li
-              a(href='/galleries_movement') Movement
+              a(href='/galleries_movements1') Movements I
             li
-              a(href='/galleries_portrait') Portrait
+              a(href='/galleries_movements2') Movements II
+            li
+              a(href='/galleries_profiles') Profiles
+            li
+              a(href='/galleries_portraits') Portraits
       .wrapper.bg_about#about_page
         .container
-          img#about_bg_img(src="../images/movements/sf_0859.jpg")
+          img#about_bg_img(src="../images/movements2/sf_0859.jpg")
           .contents.about
             #title ABOUT US
             #quote "Taking a moment is a skill,<br/>but making a moment is an art."
-            #discription 우리는 인간이 만들어 내는 다양한 움직임들에 집중합니다. 그리고 움직임이 완성되는 가장 아름다운 순간을 놓치지 않고 영원한 순간으로서 사진속에 담아 둘 것 입니다.
+            #discription 자신의 옆모습은 직접 볼 수가 없습니다. 직접 보기 위해선 도구의 도움을 필요로 합니다. 또 한 옆모습은 나 자신보다도 타인이 더 많이 보게 되는 자신의 제 2의 얼굴입니다. <br><br> Side Face는 사람들의 옆모습 처럼 평소에는 볼 수 없는 또 다른 얼굴을 찾는 것을 목표로 합니다.<br><br> Side Face는 당신의 숨겨진 얼굴을 찾기 위한 훌륭한 도구가 될 것 입니다.
+
 
 
       .wrapper.bg_empty_3#workflow_page
         .container
-          img#workflow_bg_img(src="../images/movements/DSC05232.jpg")
+          img#workflow_bg_img(src="../images/movements2/DSC05232.jpg")
           .contents.workflow
             #title
               span WORK FLOW
@@ -82,27 +108,27 @@ html
               .step1#step2
                 #txt_box
                   #quote II. Planing
-                  #discription 컨셉구상과 기획을 하는 단계입니다. 다양한 레퍼런스 자료를 통해서 클라이언트가 원하는 컨셉을 찾습니다..
+                  #discription 컨셉구상과 기획을 하는 단계입니다. 다양한 레퍼런스 자료를 통해서 클라이언트가 원하는 컨셉을 찾습니다.
               .step1#step3
                 #txt_box
                   #quote III. Making
-                  #discription 실제 촬영이 진행되는 단계 입니다. 주로 클라이언트쪽에서 의뢰한 장소에서 촬영이 이루어집니다.
+                  #discription 촬영이 진행되는 단계 입니다. 주로 클라이언트쪽에서 의뢰한 장소에서 촬영이 이루어집니다.
               .step1#step4
                 #txt_box
                   #quote IV. PostProduction
                   #discription 사진 선택과 편집을 하는 후반 작업 단계입니다. 가장 많은 시간이 소요되며, 후반작업이 완료된 사진에 대해서 수정사항이 있을 경우에는 별도의 제작비가 추가로 발생할 수 있습니다.
       .wrapper.bg_empty_4#making_page
         .container
-          img#making_bg_img(src="../images/movements/DSC05414.jpg")
+          img#making_bg_img(src="../images/movements2/DSC05414.jpg")
           .contents.making
             #title
               span MAKING
             .making_box
               .making
-                img(src='../images/youtube_empty.png')
+                img(src='../images/youtube_empty.jpg')
       .wrapper.bg_empty_7#contact_page
         .container
-          img#making_bg_img(src='../images/aboutme.jpg')
+          img#contact_bg_img(src='../images/aboutme.jpg')
           .contents.contact
             #title
               span CONTACT US

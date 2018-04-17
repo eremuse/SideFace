@@ -5,24 +5,14 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   res.render('index', {title:'Side Face'});
 });
-
-router.get('/galleries_color', function(req, res, next) {
-  res.render('galleries_color');
+router.get('/galleries_movements1', function(req, res, next) {
+  res.render('galleries_movements1');
 });
-router.get('/galleries_emotion', function(req, res, next) {
-  res.render('galleries_emotion');
+router.get('/galleries_movements2', function(req, res, next) {
+  res.render('galleries_movements2');
 });
-router.get('/galleries_extream', function(req, res, next) {
-  res.render('galleries_extream');
-});
-router.get('/galleries_movement', function(req, res, next) {
-  res.render('galleries_movement');
-});
-router.get('/galleries_portrait', function(req, res, next) {
-  res.render('galleries_portrait');
-});
-router.get('/#contact_page', function(req, res, next) {
-  res.render('index');
+router.get('/galleries_profiles', function(req, res, next) {
+  res.render('galleries_profiles');
 });
 
 
