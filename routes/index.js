@@ -14,6 +14,9 @@ router.get('/galleries_movements2', function(req, res, next) {
 router.get('/galleries_profiles', function(req, res, next) {
   res.render('galleries_profiles');
 });
+router.get('/galleries_portraits', function(req, res, next) {
+  res.render('galleries_portraits');
+});
 
 
 module.exports = router;

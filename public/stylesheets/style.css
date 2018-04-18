@@ -32,7 +32,7 @@ li {
 }
 #about_bg_img,
 #workflow_bg_img,
-#making_bg_img
+#making_bg_img,
 #contact_bg_img {
   width: 100%;
   opacity: 0.5;
@@ -618,22 +618,22 @@ span.qna_txt {
     left: 0;
   }
   .contents.about {
-    top: 48%;
+    top: 28%;
   }
   .contents.making {
-    top: 42%;
+    top:35%;
   }
   .contents.workflow {
     top: 24%;
   }
   .contents.contact {
-    top: 33%;
+    top: 46%;
   }
   .contents.making .making, .contents.about .about_box {
     width: 100%;
   }
   .making img {
-    width: 30%;
+    width: 35%;
   }
   .contact_box ul {
     font-size: 1.1rem;
@@ -655,6 +655,12 @@ span.qna_txt {
     width: 9%;
     top: 5%;
     right: -3.5%;
+  }
+  .contents.about {
+    top: 35%;
+  }
+  .contents.contact {
+    top: 55%;
   }
   .contents.gallery #title {
     padding-left: 2%;
@@ -678,6 +684,18 @@ span.qna_txt {
   }
   #main {
     top: 5%;
+  }
+  .making img {
+    width: 40%;
+  }
+  .contents.workflow {
+    top: 47%;
+  }
+  .contents.making {
+    top: 52%;
+  }
+  .contents.contact {
+    top: 57%;
   }
   .contents.gallery #title {
     padding-left: 2%;
@@ -711,7 +729,22 @@ span.qna_txt {
     top: 36%;
   }
   .step_box .step1 {
-    width: 260px;
+    width: 261px;
+    display: block;
+  }
+  .step_box #step2,
+  .step_box #step3,
+  .step_box #step4 {
+    top: 0;
+  }
+  .contents.about {
+    top: 28%;
+  }
+  .contents.workflow {
+    top: 16%;
+  }
+  .contents.making {
+    top: 24%;
   }
   .contents.gallery #title {
     padding-left: 1.5%;
