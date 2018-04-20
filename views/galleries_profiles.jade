@@ -43,31 +43,35 @@ html
               .ham
               .ham
               .ham
-          ul.main_menu
-            li
-              a#menu_company(href='#about_page') ABOUT US
-            li
-              a#menu_client() CLIENT REFFERENCE
-            li
-              a#menu_gallery() GALLERIES
-            li
-              a#menu_contact(href='/#contact_page') CONTACT
-          ul.sub_menu.client
-            li#sub_menu.workflow
-              a(href='#workflow_page') Work Flow
-            li
-              a(href='#making_page') Making
-            //li
-              a(href='#qna_page') Q&A//
-          ul.sub_menu.gallery
-            li
-              a(href='/galleries_movement') Movement
-            li
-              a(href='/galleries_portrait') Portrait
+          .menu_box
+            ul.main_menu
+              li
+                a#menu_company(href='#about_page') ABOUT US
+              li
+                a#menu_client() CLIENT
+              li
+                a#menu_gallery() GALLERIES
+              li
+                a#menu_contact(href='/#contact_page') CONTACT
+            ul.sub_menu.client
+              li#sub_menu.workflow
+                a(href='#workflow_page') Work Flow
+              li
+                a(href='#making_page') Making
+            ul.sub_menu.gallery
+              li
+                a(href='/galleries_movement') Movement
+              li
+                a(href='/galleries_portrait') Portrait
+              li
+                a(href='/galleries_profiles') Profiles
+              li
+                a(href='/galleries_portraits') Portraits
       .wrapper_gallery
         .contents.gallery
-          #title
-            span GALLERIES
+          .title_box
+            #title GALLERIES
+            #sub_title Profiles
           .m-p-g
             .m-p-g__thumbs(data-google-image-layout='', data-max-height='400')
               img.m-p-g__thumbs-img(src='../images/portraits/090327_1.jpg?image=940', data-full='../images/portraits/090327_1.jpg?image=940')

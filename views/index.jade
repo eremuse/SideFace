@@ -29,7 +29,31 @@ html
         .container
           img#index_bg_img(src="../images/movements/mv1_2714.jpg")
           a(href='/')
-            img#logo(src='../images/icons/logo_mobile.png')
+            img#logo_index(src='../images/icons/logo_mobile.png')
+          .menu_box
+            ul.main_menu
+              li
+                a#menu_company(href='#about_page') ABOUT US
+              li
+                a#menu_client() CLIENT
+              li
+                a#menu_gallery() GALLERIES
+              li
+                a#menu_contact(href='#contact_page') CONTACT
+            ul.sub_menu.client
+              li#sub_menu.workflow
+                a(href='#workflow_page') Work Flow
+              li
+                a(href='#making_page') Making
+            ul.sub_menu.gallery
+              li
+                a(href='/galleries_movements1') Movements I
+              li
+                a(href='/galleries_movements2') Movements II
+              li
+                a(href='/galleries_profiles') Profiles
+              li
+                a(href='/galleries_portraits') Portraits
           #mySidenav.sidenav
             .sidenav_box
               a.closebtn(href='javascript:void(0)', onclick='closeNav()') ×
@@ -61,29 +85,6 @@ html
               .ham
               .ham
               .ham
-          ul.main_menu
-            li
-              a#menu_company(href='#about_page') ABOUT US
-            li
-              a#menu_client() CLIENT REFFERENCE
-            li
-              a#menu_gallery() GALLERIES
-            li
-              a#menu_contact(href='#contact_page') CONTACT
-          ul.sub_menu.client
-            li#sub_menu.workflow
-              a(href='#workflow_page') Work Flow
-            li
-              a(href='#making_page') Making
-          ul.sub_menu.gallery
-            li
-              a(href='/galleries_movements1') Movements I
-            li
-              a(href='/galleries_movements2') Movements II
-            li
-              a(href='/galleries_profiles') Profiles
-            li
-              a(href='/galleries_portraits') Portraits
       .wrapper.bg_about#about_page
         .container
           img#about_bg_img(src="../images/movements2/sf_0859.jpg")

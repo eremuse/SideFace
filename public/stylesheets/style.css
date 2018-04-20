@@ -43,12 +43,14 @@ li {
   top: 0;
   z-index: -2;
 }
-#logo {
+#logo,
+#logo_index {
   position: fixed;
   top: 5%;
   right: 0;
   width: 30%;
   margin-right: 40px;
+  z-index: 2;
 }
 
 ul {
@@ -101,7 +103,7 @@ ul {
   display: none;
   position: fixed;
   top: 5%;
-
+  z-index: 3;
 }
 .main_menu_hamberger .ham {
   display: inline-block;
@@ -114,7 +116,7 @@ ul {
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   top: 0;
   left: 0;
   background-color: #111;
@@ -152,6 +154,7 @@ ul {
 
 #main {
   transition: margin-left .5s;
+  z-index: 2;
 }
 .sidenav_box {
   padding-top: 20%;
@@ -177,12 +180,17 @@ ul {
   top: 35%;
   left: 40%;
 }
-#title {
+#title,
+#sub_title {
   font-size: 4.5rem;
   font-weight: bold;
   font-family: 'Maven Pro', sans-serif;
   color: #4A4A4A;
-
+  z-index: 2;
+}
+#sub_title {
+  font-size: 2rem;
+  color: #F2F2F2;
 }
 #quote {
   font-size: 3rem;
@@ -199,15 +207,15 @@ ul {
 
 .contents.workflow,
 .contents.making,
-.contents.qna,
-.contents.gallery,
 .contents.about,
 .contents.contact {
   max-width: 100%;
   top: 7%;
   left: 10%;
 }
+
 .contents.gallery {
+  top: 0;
   left: 0;
 }
 
@@ -228,9 +236,13 @@ ul {
   width: 390px;
 }
 
+.contents.gallery #title,
+.contents.gallery #sub_title {
+  z-index: 2;
+  position: absolute;
+}
 .contents.making .making,
-.contents.about .about_box,
-.contents.qna .qna_box {
+.contents.about .about_box {
   width: 800px;
   height: 295px;
 }
@@ -362,12 +374,7 @@ span.qna_txt {
 .worktypes_box #discription {
   margin-bottom: 0;
 }
-#logo_movement {
-  position: relative;
-  top: 1px;
-  width: 65px;
-  margin-right: 15px;
-}
+
 
 .contact_box ul {
   padding: 0;
@@ -404,117 +411,127 @@ span.qna_txt {
 }
 
 
-
 @media only screen and (max-width: 1281px) {
   #logo {
-    width: 10%;
+
   }
 }
 
-@media only screen and (max-width: 1025px) {
+
+@media only screen and (min-width: 767px) {
   .main_menu_hamberger {
-    display: hidden;
-  }
-  #logo {
-    right: -2.3%;
-    width: 7%;
-    top: 3%;
+    display: none;
+    top: 2%;
+    left: -2%;
   }
   .main_menu {
-    top: -5.7%;
-    right: -2.3%;
+    top: -7.5%;
+    right: -28px;
+  }
+  .sub_menu {
+    top: 60px;
+    right: -28px;
+  }
+  .sub_menu li,
+  .main_menu li {
+    font-size: 1.5rem;
   }
   .main_menu li {
-    font-size: 2rem;
+    padding-left: 3%;
+    padding-top: 5px;
+    font-size: 1.5rem;
   }
-  .contents.gallery #title {
-    padding-left: 0;
-  }
-  .contents.gallery {
-    top: 10%;
-    left: 2%;
-  }
-}
-
-@media only screen and (min-height: 811px) and (max-height: 1023px) {
-  .sidenav_box {
-    padding-top: 40%;
-  }
-  #index_bg_img,
-  #about_bg_img,
-  #workflow_bg_img,
-  #making_bg_img,
-  #contact_bg_img {
-    width: 325%;
-    left: -122%;
-  }
-  #about_bg_img {
-    left: -138%;
-  }
-  #workflow_bg_img {
-    left: -151%;
-  }
-  #making_bg_img {
-    left: -102%;
-  }
-  .contents.about #discription {
-    width: 280px;
-  }
-}
-
-
-
-@media only screen and (max-width: 769px) {
-  .main_menu_hamberger {
-    display: block;
-    top: 2.5%;
+  .sub_menu li {
+    font-size: 1.3rem;
+    padding-left: 3%;
   }
   #index_bg_img {
     width: 100%;
   }
   #logo {
-    top: 2%;
-    right: -3%;
-    width: 9%;
+    top: 1%;
+    right: -30px;
+    width: 50px;
+    z-index: 3;
   }
-  .contents.gallery {
-    left: 0;
+  #side_menu_logo {
+    position: absolute;
+    top: 14%;
+    right: 37%;
+    z-index: 2;
   }
-  .main_menu {
-    display: none ;
+  #side_menu_logo img {
+    width: 25%;
+  }
+  #title {
+    font-size: 3rem;
+  }
+  #discription,
+  .contents.about #discription,
+  .contact_box ul li {
+    width: 280px;
+    font-size: 1.2rem;
+  }
+  #quote,
+  .step1 #quote,
+  #nickname {
+    font-size: 2.3rem;
+  }
+  .making img {
+    width: 40%;
+  }
+  .contents.workflow,
+  .contents.making,
+  .contents.about,
+  .contents.contact {
+    left: 4%;
   }
   .contents.making .making {
     width: 100%;
   }
-  .contents.gallery {
-    top: 8%;
+  .contact_box .sns_box {
+    width: 25px;
   }
-  .contents.gallery #title {
-    padding-left: 1.5%;
+  .m-p-g {
+    width: 659px;
   }
-}
-
-@media only screen and (min-width: 567px) and (orientation: landscape) {
-  .contents.gallery #title {
-    padding-left: 3%;
+  .title_box {
+    display: none;
   }
 }
 
 @media only screen and (min-width: 567px) and (orientation: landscape) {
-  #main {
-    top: 5%;
-    left: -3%;
-    z-index: 1;
+  #logo {
+    position: fixed;
+    top: 2px;
+    right: -6.5%;
+    width: 30px;
+  }
+  .main_menu {
+    display: none;
+  }
+  .main_menu_hamberger {
+    display: block;
+    top: 2px;
+    left: -5.6%;
   }
   .main_menu_hamberger .ham {
-    width: 39px;
-    height: 37px;
+    border-right: 2px solid #979797;
+    width: 36px;
+    height: 25px;
   }
-  #logo {
-    width: 10%;
-    top: 5%;
-    right: -4%;
+  .contents.gallery #title {
+    display: none;
   }
+  .contents.gallery #sub_title {
+    top: 25px;
+    right: 4px;
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (min-width: 567px) and (orientation: landscape) {
+
   #side_menu_logo {
     position: absolute;
     top: 15%;
@@ -607,15 +624,10 @@ span.qna_txt {
   }
   .contents.workflow,
   .contents.making,
-  .contents.gallery,
   .contents.about,
   .contents.contact {
     top: 17%;
     left: 3%;
-  }
-  .contents.gallery {
-    top: 20%;
-    left: 0;
   }
   .contents.about {
     top: 28%;
@@ -648,42 +660,57 @@ span.qna_txt {
 }
 
 @media only screen and (min-width: 666px) and (orientation: landscape) {
-  #main {
-    top: 5%;
-  }
   #logo {
-    width: 9%;
-    top: 5%;
-    right: -3.5%;
+    right: -5.7%;
   }
+  .main_menu_hamberger {
+    display: block;
+    left: -5%;
+  }
+  .main_menu_hamberger .ham {
+    width: 37px;
+    height: 31px;
+    border-right: 2px solid #979797;
+  }
+  .main_menu {
+    display: none;
+  }
+
   .contents.about {
     top: 35%;
   }
   .contents.contact {
     top: 55%;
   }
-  .contents.gallery #title {
-    padding-left: 2%;
+  .contents.gallery #sub_title {
+    top: 24px;
+    right: 3px;
   }
-  .main_menu_hamberger .ham {
-    width: 39px;
-    height: 40px;
+
+}
+
+@media only screen and (min-width: 730px) and (orientation: landscape) {
+  #logo {
+    right: -5%;
+  }
+  .main_menu_hamberger {
+    left: -4.5%;
   }
 }
 
 @media only screen and (min-width: 735px) and (orientation: landscape) {
-  .contents.gallery #title {
-      padding-left: 1.5%;
-  }
-}
-@media only screen and (min-width: 735px) and (orientation: landscape) {
   #logo {
-    position: fixed;
-    top: 4.5%;
-    right: -3.5%;
+    right: -35px;
+    width: 5%;
   }
-  #main {
-    top: 5%;
+  .main_menu_hamberger {
+    display: block;
+    left: -4.3%;
+  }
+  .main_menu_hamberger .ham {
+    width: 37px;
+    height: 32px;
+    border-right: 2px solid #979797;
   }
   .making img {
     width: 40%;
@@ -698,29 +725,64 @@ span.qna_txt {
     top: 57%;
   }
   .contents.gallery #title {
-    padding-left: 2%;
+    display: none;
   }
+  .contents.gallery #sub_title {
+    top: 30px;
+    right: 5px;
+    font-size: 1rem;
+  }
+
 }
 
-@media only screen and (min-width: 811px) and (orientation: landscape) {
-  .side_menu_list {
-    width: 49%;
-  }
-  .contents.gallery #title {
-    padding-left: 1.5%;
-  }
-}
+
 
 @media only screen and (min-width: 811px) and (orientation: landscape) {
   #logo {
-    width: 8%;
-    top: 3.5%;
+    width: 35px;
+    right: -37px;
   }
   .main_menu_hamberger {
     display: block;
   }
+  .main_menu_hamberger .ham {
+    width: 38px;
+    height: 30px;
+  }
   .main_menu {
     display: none;
+  }
+  .sidenav_box {
+    padding-top: 40%;
+  }
+
+  #index_bg_img,
+  #about_bg_img,
+  #workflow_bg_img,
+  #making_bg_img,
+  #contact_bg_img {
+    /* width: 325%; */
+    left: -122%;
+  }
+  #about_bg_img {
+    left: -138%;
+  }
+  #workflow_bg_img {
+    left: -151%;
+  }
+  #making_bg_img {
+    left: -102%;
+  }
+  .contents.about #discription {
+    width: 280px;
+  }
+  .title_box {
+    display: block;
+  }
+  .contents.gallery #sub_title {
+    top: 30px;
+    right: -22.8%;
+    font-size: 1rem;
   }
   .side_menu_list {
     width: 49%;
@@ -746,20 +808,47 @@ span.qna_txt {
   .contents.making {
     top: 24%;
   }
-  .contents.gallery #title {
-    padding-left: 1.5%;
+
+}
+
+@media only screen and (min-width: 822px) and (orientation: landscape) {
+  #logo {
+    width: 35px
+  }
+  .main_menu_hamberger {
+    left: -4.1%;
+  }
+  .contents.gallery #sub_title {
+    right: -24.5%;
   }
 }
 
 
 
-@media only screen and (max-width: 485px) {
+@media only screen and (max-width: 415px) {
+  #logo {
+    top: 2px;
+    right: -9%;
+    width: 30px;
+    z-index: 2;
+  }
+  #logo_index {
+    width: 15%;
+    top: 2px;
+    right: -38px;
+  }
   .main_menu {
     display: none;
   }
+  .main_menu_hamberger {
+    display: block;
+    top: 2px;
+    left: -8%;
+  }
   .main_menu_hamberger .ham {
-    width: 39px;
-    height: 40px;
+    width: 37px;
+    height: 28px;
+    border-right: 2px solid #979797;
   }
   .sidenav_box {
     padding-top: 25%;
@@ -820,19 +909,6 @@ span.qna_txt {
   #contact_bg_img {
     left: -81%;
   }
-
-  #logo {
-    width: 15%;
-    top: 1.8%;
-    right: -7%;
-    z-index: 0;
-  }
-  .main_menu_hamberger {
-    top: 2%;
-    left: -6%;
-    z-index: 1;
-  }
-
   .contents.about,
   .contents.workflow,
   .contents.making
@@ -849,12 +925,7 @@ span.qna_txt {
     width: 330px;
     font-size: 1.3rem;
   }
-  .contents.gallery {
-    width: 100%;
-    height: 100%;
-    top: 10%;
-    left: 0;
-  }
+
   .contents.workflow {
     top: 27%;
   }
@@ -870,20 +941,19 @@ span.qna_txt {
   .contents.workflow #title,
   .contents.making #title,
   .contents.qna #title,
-  .contents.gallery #title,
   .contents.about #title,
   .contents.contact #title,
   .contents.gallery #title {
     font-size: 3rem;
-    width: 300px;
-    height: 30px;
   }
-
   .contents.gallery #title {
-    margin-left: 1%;
-    margin-bottom: -10px;
+    display: none;
   }
-
+  .contents.gallery #sub_title {
+    font-size: 1rem;
+    top: 25px;
+    right: 3px;
+  }
   .contents.making .making_box {
     margin-top: 20px;
   }
@@ -935,11 +1005,7 @@ span.qna_txt {
     font-size: 1.6rem;
     line-height: 1.2;
   }
-  .m-p-g {
-    position: relative;
-    margin: 0 2.9%;
-    margin-top: 5%;
-  }
+
   .m-p-g__fullscreen.active {
     height: 100%;
   }
@@ -948,26 +1014,53 @@ span.qna_txt {
   }
 }
 
-@media only screen and (max-width: 376px) {
-  .main_menu_hamberger .ham {
-    width: 39px;
-    height: 40px;
+@media only screen and (min-height: 666px) and (max-height: 735px) {
+  .main_menu_hamberger {
+    top: 1.5%;
   }
-  #main {
-    left: -6%;
+  #logo {
+    top: 1.3%;
+  }
+}
+
+@media only screen and (max-width: 412px) {
+  #logo,
+  .main_menu_hamberger {
+    top: 2px;
   }
 
+}
+
+@media only screen and (max-width: 376px) {
+  #logo {
+    top: 2px;
+    right: -37px;
+    width: 30px;
+  }
+  .main_menu_hamberger {
+    display: block;
+    top: 2px;
+    left: -8.4%;
+  }
+  .main_menu_hamberger .ham {
+    width: 36px;
+    height: 27px;
+    border-right: 2px solid #979797;
+  }
   .contents.workflow #title,
   .contents.making #title,
   .contents.qna #title,
-  .contents.gallery #title,
   .contents.about #title,
-  .contents.contact #title,
-  .contents.gallery #title {
+  .contents.contact #title {
     font-size: 2.8rem;
   }
-  .contents.gallery #title {
-    margin-left: 1.3%;
+  .contents.gallery #sub_title {
+    top: 25px;
+    right: 3px;
+    font-size: 1rem;
+  }
+  .contents.gallery {
+    top: 0;
   }
   .sidenav_box {
     padding-top: 30%;
@@ -1016,26 +1109,24 @@ span.qna_txt {
 
 
 
+
+
 @media only screen and (max-width: 321px) {
-  #main {
-    left: -8%;
-  }
   .main_menu_hamberger {
-    top: 17px;
-    left: -7%;
+    top: 2px;
+    left: -10%;
   }
   .main_menu_hamberger .ham {
-    width: 38px;
-    height: 35px;
+    width: 36px;
+    height: 22px;
   }
 
   #logo {
     position: fixed;
-    width: 16%;
-    top: 3%;
-    right: -9%;
+    top: 2px;
+    right: -12%;
+    width: 25px;
   }
-
   #side_menu_logo {
     position: relative;
     top: 10%;
@@ -1112,15 +1203,14 @@ span.qna_txt {
   .contents.workflow #title,
   .contents.making #title,
   .contents.qna #title,
-  .contents.gallery #title,
   .contents.about #title,
-  .contents.contact #title,
-  .contents.gallery #title {
+  .contents.contact #title {
     width: 280px;
     font-size: 2.6rem;
   }
-  .contents.gallery #title {
-    margin-bottom: -15px;
+  .contents.gallery #sub_title {
+    top: 22px;
+    right: 3px;
   }
   .contents.making {
     top: 61%;
@@ -1138,11 +1228,211 @@ span.qna_txt {
   .contact_box .sns_box {
     width: 25px;
   }
+}
+
+/* web responsive */
+
+
+@media only screen and (min-width: 1023px) {
+  .main_menu_hamberger {
+    display: none;
+  }
+  #logo {
+    top: 2%;
+    left: 92.5%;
+    width: 6%;
+  }
+  .main_menu {
+    display: block;
+    top: -6%;
+    right: -2.3%;
+  }
+  .sub_menu {
+    top: 14%;
+    right: -2.3%;
+  }
+  .main_menu li {
+    display: block;
+    font-size: 2rem;
+  }
+  .sub_menu li {
+    display: block;
+    font-size: 1.5rem;
+  }
+
+  #index_bg_img,
+  #about_bg_img,
+  #workflow_bg_img,
+  #making_bg_img,
+  #contact_bg_img {
+    width: 100%;
+  }
+  .contents.about {
+    top: 55%;
+  }
+  .contents.workflow {
+    top: 17%;
+  }
+  .contents.contact {
+    top: 61%;
+  }
+  .contents.gallery {
+    left: 0;
+  }
+  .contents.about #discription  {
+    width: 360px;
+  }
+  .contents.gallery #sub_title {
+    display: none;
+  }
+  .making img {
+    width: 50%;
+  }
+
+}
+
+@media only screen and (min-height: 767px) and (max-height: 768px){
+  .main_menu {
+    top: -9%;
+  }
+}
+
+@media only screen and (min-height: 1365px) {
+  #logo {
+    top: 25px;
+    left: 91.5%;
+    width: 70px;
+  }
+  .main_menu {
+    top: -5%;
+  }
+  .sub_menu {
+    top: 7%;
+  }
+  .main_menu {
+    top: -55px;
+    left: 407px;
+  }
+  .sub_menu {
+    top: 8%;
+
+  }
+
   .m-p-g {
     width: 100%;
-    right: 2px;
-    margin: 0;
-    margin-top: 7%;
-    right: 0;
+  }
+}
+@media only screen and (min-width: 1365px) {
+  .menu_box {
+    top: 20%;
+  }
+  .main_menu {
+    top: -4%;
+    right: -1%;
+  }
+  .sub_menu {
+    top: 12%;
+    right: -1%;
+  }
+  #logo {
+    top: 2.5%;
+    left: 92%;
+    right: -1%;
+  }
+  .m-p-g {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 1439px) {
+  #logo {
+    top: 23px;
+    left: 92%;
+    width: 95px;
+  }
+  .main_menu,
+  .sub_menu {
+    right: -1.3%;
+  }
+  .main_menu_hamberger {
+    display: none;
+  }
+  .main_menu {
+    display: block;
+    top: -2%;
+  }
+  .main_menu li {
+    font-size: 3rem;
+  }
+  .sub_menu {
+    top: 15%;
+  }
+  .sub_menu li {
+    font-size: 2rem;
+  }
+
+  #discription,
+  .contents.about #discription,
+  .contact_box ul li {
+    width: 660px;
+    font-size: 2rem;
+  }
+  #nickname {
+    font-size: 3.5rem
+  }
+  .making img {
+    width: 50%;
+  }
+
+  .contents.about {
+    top: 45%;
+  }
+  .contents.gallery {
+    left: 0;
+  }
+  #title {
+    font-size: 5rem;
+  }
+  #quote {
+    font-size: 3.5rem;
+  }
+  #discription {
+    font-size: 2rem;
+  }
+  .contents.about #discription {
+    margin-top: 5%;
+  }
+  .step_box .step1 {
+    display: inline-block;
+  }
+  .contents.gallery #title,
+  .contents.gallery #sub_title {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  #logo {
+    left: 94%;
+  }
+  .main_menu, .sub_menu {
+    right: -8px;
+  }
+}
+
+@media only screen and (min-width: 1700px) {
+  .m-p-g {
+    max-width: 1720px;
+  }
+}
+
+@media only screen and (min-width: 2559px) {
+  #logo {
+    left: 95%;
+  }
+  .main_menu, .sub_menu {
+    right: -0.3%;
+  }
+  .m-p-g {
+    max-width: 70%;
   }
 }
