@@ -43,8 +43,7 @@ li {
   top: 0;
   z-index: -2;
 }
-#logo,
-#logo_index {
+#logo {
   position: fixed;
   top: 5%;
   right: 0;
@@ -411,11 +410,6 @@ span.qna_txt {
 }
 
 
-@media only screen and (max-width: 1281px) {
-  #logo {
-
-  }
-}
 
 
 @media only screen and (min-width: 767px) {
@@ -829,7 +823,7 @@ span.qna_txt {
   #logo {
     top: 2px;
     right: -9%;
-    width: 30px;
+    width: 60px;
     z-index: 2;
   }
   #logo_index {
@@ -843,11 +837,11 @@ span.qna_txt {
   .main_menu_hamberger {
     display: block;
     top: 2px;
-    left: -8%;
+    left: -9%;
   }
   .main_menu_hamberger .ham {
-    width: 37px;
-    height: 28px;
+    width: 40px;
+    height: 42px;
     border-right: 2px solid #979797;
   }
   .sidenav_box {
@@ -946,16 +940,18 @@ span.qna_txt {
   .contents.gallery #title {
     font-size: 3rem;
   }
+  .title_box {
+    margin-top: 48px;
+  }
   .contents.gallery #title {
     display: none;
   }
   .contents.gallery #sub_title {
     font-size: 1rem;
-    top: 25px;
     right: 3px;
   }
   .contents.making .making_box {
-    margin-top: 20px;
+    margin-top: 5px;
   }
   .contents.about .about_box {
     width: 400px;
@@ -963,7 +959,7 @@ span.qna_txt {
   }
   .contents.about #quote {
     font-size: 2.6rem;
-    margin-top: 22px;
+    margin-top: 5px;
   }
   .contents.qna .qna_box {
     width: 96.5%;
@@ -979,10 +975,6 @@ span.qna_txt {
   }
   .step1 #quote {
     font-size: 2.5rem;
-  }
-  .contact_box,
-  .step_box {
-    margin-top: 15px;
   }
   .step_box .step1 {
     margin-bottom: 10px;
@@ -1033,19 +1025,7 @@ span.qna_txt {
 
 @media only screen and (max-width: 376px) {
   #logo {
-    top: 2px;
-    right: -37px;
-    width: 30px;
-  }
-  .main_menu_hamberger {
-    display: block;
-    top: 2px;
-    left: -8.4%;
-  }
-  .main_menu_hamberger .ham {
-    width: 36px;
-    height: 27px;
-    border-right: 2px solid #979797;
+    right: -9.8%;
   }
   .contents.workflow #title,
   .contents.making #title,
@@ -1055,7 +1035,6 @@ span.qna_txt {
     font-size: 2.8rem;
   }
   .contents.gallery #sub_title {
-    top: 25px;
     right: 3px;
     font-size: 1rem;
   }
@@ -1113,19 +1092,10 @@ span.qna_txt {
 
 @media only screen and (max-width: 321px) {
   .main_menu_hamberger {
-    top: 2px;
-    left: -10%;
+    left: -11%;
   }
-  .main_menu_hamberger .ham {
-    width: 36px;
-    height: 22px;
-  }
-
   #logo {
-    position: fixed;
-    top: 2px;
     right: -12%;
-    width: 25px;
   }
   #side_menu_logo {
     position: relative;
@@ -1208,10 +1178,7 @@ span.qna_txt {
     width: 280px;
     font-size: 2.6rem;
   }
-  .contents.gallery #sub_title {
-    top: 22px;
-    right: 3px;
-  }
+
   .contents.making {
     top: 61%;
   }
